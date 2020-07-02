@@ -13,6 +13,6 @@
 # the License.
 
 """napalm-skeleton package."""
-from napalm_mrv.mrv import MRVDriver  # noqa
+from napalm_optiswitch.optiswitch import OptiswitchDriver  # noqa
 
-__all__ = ('MRVDriver',)
+__all__ = ('OptiswitchDriver',)

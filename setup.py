@@ -10,7 +10,7 @@ with open('requirements.txt') as f:
     install_requires = f.read().strip().splitlines()
 
 setup(
-    name="napalm-mrv",
+    name="napalm-optiswitch",
     version="0.1.0",
     packages=find_packages(),
     author="Fredrik Rönnvall",
@@ -24,7 +24,7 @@ setup(
         'Operating System :: POSIX :: Linux',
         'Operating System :: MacOS',
     ],
-    url="https://github.com/napalm-automation/napalm-mrv",
+    url="",
     include_package_data=True,
     install_requires=install_requires,
 )

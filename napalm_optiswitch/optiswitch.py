@@ -33,7 +33,7 @@ from napalm.base.helpers import textfsm_extractor
 from netmiko import ConnectHandler
 import textfsm
 
-class MRVDriver(NetworkDriver):
+class OptiswitchDriver(NetworkDriver):
     """Napalm driver for Skeleton."""
 
     def __init__(self, hostname, username, password, timeout=60, optional_args=None):
@@ -65,6 +65,16 @@ class MRVDriver(NetworkDriver):
         # Should be strings, not ints
         return [str(p) for p in ports]
 
+    
+    def _convert_speed(self, speed):
+        """ Convert speed to Mbit (int) """
+        m = re.match(r'^(?P<speed>\d+) (?P<prefix>[MG])bps', speed)
+        if m:
+            speed = int(m.group('speed'))
+            if m.group('prefix') == 'G':
+                speed *= 1E3
+        return speed
+
 
     def get_interfaces(self):
         """Get interface list"""
@@ -77,6 +87,7 @@ class MRVDriver(NetworkDriver):
                 'is_up': i['linkstate'] == 'ON',
                 'is_enabled': i['adminstate'] == 'ENABLE',
                 'description': i['description'],
+                'speed': self._convert_speed(i['actualspeed'])
 
             } for i in info
         }
@@ -108,6 +119,20 @@ class MRVDriver(NetworkDriver):
         info = textfsm_extractor(
             self, "show_interface_detail", self._send_command('show interface detail')
         )
+        ips = {}
+        for item in info:
+            m = re.match(r'^(?P<ip>)/(?P<prefix_length>\d+)', item['ipaddress'])
+            if m:
+                ips.update({
+                    item['vif']: {
+                        'ipv4': {
+                            m.group('ip'): {
+                                'prefix_length': m.group('prefix_length')
+                            }
+                        }
+                    }
+                })  
+
         return {
             item['vif']: {'ipv4:': [item['ipaddress']]} for item in info
         }
