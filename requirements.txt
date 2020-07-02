@@ -1,0 +1,4 @@
+napalm>=2.0.0
+netmiko>=1.4.3
+netaddr
+textfsm
