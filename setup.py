@@ -24,7 +24,7 @@ setup(
         'Operating System :: POSIX :: Linux',
         'Operating System :: MacOS',
     ],
-    url="",
+    url="https://github.com/fredronnv/napalm-optiswitch",
     include_package_data=True,
     install_requires=install_requires,
 )
