@@ -137,6 +137,17 @@ class OptiswitchDriver(NetworkDriver):
             item['vif']: {'ipv4:': [item['ipaddress']]} for item in info
         }
 
+    def get_interfaces_mode(self):
+        """ Return data on which interfaces are tagged/untagged """
+        info = textfsm_extractor(
+            self, "show_port_details", self._send_command('show port details')
+        )
+
+        return  {
+            'untagged': [i['port'] for i in info if i['outboundtagged'] == 'untagged'],
+            'tagged': [i['port'] for i in info if i['outboundtagged'] == 'tagged'],
+        }
+
     def open(self):
         """Implement the NAPALM method open (mandatory)"""
         device_type = 'mrv_optiswitch'
