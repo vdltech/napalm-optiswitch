@@ -46,7 +46,7 @@ class OptiswitchDriver(NetworkDriver):
 
         if optional_args is None:
             optional_args = {}
-    
+
     def _send_command(self, command):
         """Wrapper for self.device.send.command().
         If command is a list will iterate through commands until valid command.
@@ -65,7 +65,7 @@ class OptiswitchDriver(NetworkDriver):
         # Should be strings, not ints
         return [str(p) for p in ports]
 
-    
+
     def _convert_speed(self, speed):
         """ Convert speed to Mbit (int) """
         m = re.match(r'^(?P<speed>\d+) (?P<prefix>[MG])bps', speed)
@@ -78,10 +78,14 @@ class OptiswitchDriver(NetworkDriver):
 
     def get_interfaces(self):
         """Get interface list"""
-        info = textfsm_extractor(
+        ports = textfsm_extractor(
             self, "show_port_details", self._send_command('show port details')
         )
-        return {
+        interfaces = textfsm_extractor(
+            self, "show_interface_detail", self._send_command('show interface detail')
+        )
+        result = {}
+        result.update({
             i['port']:
             {
                 'is_up': i['linkstate'] == 'ON',
@@ -89,8 +93,19 @@ class OptiswitchDriver(NetworkDriver):
                 'description': i['description'],
                 'speed': self._convert_speed(i['actualspeed'])
 
-            } for i in info
-        }
+            } for i in ports
+        })
+        result.update({
+            i['vif']:
+            {
+                'is_up': i['linkstate'] == 'UP',
+                'is_enabled': i['active'] == 'Yes',
+                'description': i['description'],
+                'speed': 0
+
+            } for i in interfaces
+        })
+        return(result)
 
     def get_facts(self):
         info = textfsm_extractor(
@@ -113,7 +128,7 @@ class OptiswitchDriver(NetworkDriver):
             if m:
                 vlan_id = int(m.group(1))
                 vlans.update({vlan_id: {'name': item['name'], 'interfaces': self._expand_port_list(item['ports'])}})
-        return vlans                
+        return vlans
 
     def get_interfaces_ip(self):
         info = textfsm_extractor(
@@ -121,21 +136,19 @@ class OptiswitchDriver(NetworkDriver):
         )
         ips = {}
         for item in info:
-            m = re.match(r'^(?P<ip>)/(?P<prefix_length>\d+)', item['ipaddress'])
-            if m:
+            if item['ipaddress']:
+                ip, prefix_length = item['ipaddress'].split('/')
                 ips.update({
                     item['vif']: {
                         'ipv4': {
-                            m.group('ip'): {
-                                'prefix_length': m.group('prefix_length')
+                            ip: {
+                                'prefix_length': prefix_length
                             }
                         }
                     }
-                })  
+                })
 
-        return {
-            item['vif']: {'ipv4:': [item['ipaddress']]} for item in info
-        }
+        return ips
 
     def get_interfaces_mode(self):
         """ Return data on which interfaces are tagged/untagged """
