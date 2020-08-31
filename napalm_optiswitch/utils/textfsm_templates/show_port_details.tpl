@@ -6,7 +6,7 @@ Value ActualSpeed (\d+ [MG]bps)
 
 Start
   ^Port ${Port} details:
-  ^Description\s+: <${Description}>
+  ^Description\s+: ${Description}
   ^Link\s+: ${LinkState}
   ^Actual speed\s+:\s+${ActualSpeed}
   ^State\s+: ${AdminState} -> Record
