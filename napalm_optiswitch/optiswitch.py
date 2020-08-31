@@ -68,7 +68,7 @@ class OptiswitchDriver(NetworkDriver):
 
     def _convert_speed(self, speed):
         """ Convert speed to Mbit (int) """
-        m = re.match(r'^(?P<speed>\d+) (?P<prefix>[MG])bps', speed)
+        m = re.match(r'^(?P<speed>\d+)\s*(?P<prefix>[MG])bps', speed)
         if m:
             speed = int(m.group('speed'))
             if m.group('prefix') == 'G':
