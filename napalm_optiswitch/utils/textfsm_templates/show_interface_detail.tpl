@@ -1,4 +1,4 @@
-Value Vif (vif\d+)
+Value Vif (vif\d+|eth\d+)
 Value Name (\S+)
 Value Ports ([\d,]+)
 Value MacAddress (\S+)
