@@ -164,12 +164,14 @@ class OptiswitchDriver(NetworkDriver):
     def open(self):
         """Implement the NAPALM method open (mandatory)"""
         device_type = 'mrv_optiswitch'
+        global_delay_factor = 2
         self.device = ConnectHandler(
             device_type=device_type,
             host=self.hostname,
             username=self.username,
             password=self.password,
-            timeout=self.timeout)
+            timeout=self.timeout,
+            global_delay_factor=global_delay_factor)
             #,
             #**self.netmiko_optional_args)
         self.device.enable()
