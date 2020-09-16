@@ -1,6 +1,6 @@
 Value Vif (vif\d+|eth\d+)
 Value Name (\S+)
-Value Ports ([\d,]+)
+Value Ports ([\d,\-]+)
 Value MacAddress (\S+)
 Value IpAddress (\d+\.\d+\.\d+\.\d+/\d+)
 Value LinkState (UP|DOWN)

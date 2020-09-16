@@ -58,6 +58,7 @@ class OptiswitchDriver(NetworkDriver):
         ports = []
         if portlist:
             for section in portlist.split(','):
+                section = section.strip()
                 m = re.match(r'^(\d+)-(\d+)', section)
                 if m:
                     ports += range(int(m.group(1)), int(m.group(2)) + 1)
