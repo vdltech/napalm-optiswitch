@@ -153,13 +153,13 @@ class OptiswitchDriver(NetworkDriver):
         )
         ips = {}
         for item in info:
-            if item['ipaddress']:
+            if item['ipaddress'] and item['ipaddress'] != 'not defined':
                 ip, prefix_length = item['ipaddress'].split('/')
                 ips.update({
                     item['vif']: {
                         'ipv4': {
                             ip: {
-                                'prefix_length': prefix_length
+                                'prefix_length': prefix_length.strip()
                             }
                         }
                     }
