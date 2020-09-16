@@ -56,12 +56,14 @@ class OptiswitchDriver(NetworkDriver):
     def _expand_port_list(self, portlist):
         """ Expand optiswitch portlist, ex 1,4,6-9 """
         ports = []
-        for section in portlist.split(','):
-            m = re.match(r'^(\d+)-(\d+)', section)
-            if m:
-                ports += range(int(m.group(1)), int(m.group(2)) + 1)
-            else:
-                ports.append(int(section))
+        if portlist:
+            for section in portlist.split(','):
+                section = section.strip()
+                m = re.match(r'^(\d+)-(\d+)', section)
+                if m:
+                    ports += range(int(m.group(1)), int(m.group(2)) + 1)
+                else:
+                    ports.append(int(section))
         # Should be strings, not ints
         return [str(p) for p in ports]
 
@@ -111,11 +113,20 @@ class OptiswitchDriver(NetworkDriver):
         info = textfsm_extractor(
             self, "show_version", self._send_command('show version')
         )[0]
+        interfaces = textfsm_extractor(
+            self, "show_interface_detail", self._send_command('show interface detail')
+        )
+
+        # Return interface list including virtual interfaces
+        interface_list = self._expand_port_list(info['validports'])
+        for i in interfaces:
+            interface_list.append(i['vif'])
+
         return {
             'vendor': 'MRV',
             'model': info['model'],
             'serial_number': info['serialnumber'],
-            'interface_list': self._expand_port_list(info['validports'])
+            'interface_list': interface_list
         }
 
     def get_vlans(self):
@@ -127,7 +138,13 @@ class OptiswitchDriver(NetworkDriver):
             m = re.match(r'^vif(\d+)', item['vif'])
             if m:
                 vlan_id = int(m.group(1))
-                vlans.update({vlan_id: {'name': item['name'], 'interfaces': self._expand_port_list(item['ports'])}})
+                # Ignore VLANs higher than 4094
+                if vlan_id < 4095:
+                    # Add port and vif to list of interfaces
+                    interfaces = self._expand_port_list(item['ports'])
+                    interfaces.append(item['vif'])
+                    vlans.update({vlan_id: {'name': item['name'], 'interfaces': interfaces}})
+
         return vlans
 
     def get_interfaces_ip(self):
@@ -136,13 +153,13 @@ class OptiswitchDriver(NetworkDriver):
         )
         ips = {}
         for item in info:
-            if item['ipaddress']:
+            if item['ipaddress'] and item['ipaddress'] != 'not defined':
                 ip, prefix_length = item['ipaddress'].split('/')
                 ips.update({
                     item['vif']: {
                         'ipv4': {
                             ip: {
-                                'prefix_length': prefix_length
+                                'prefix_length': prefix_length.strip()
                             }
                         }
                     }
@@ -155,11 +172,20 @@ class OptiswitchDriver(NetworkDriver):
         info = textfsm_extractor(
             self, "show_port_details", self._send_command('show port details')
         )
+        interface_info = textfsm_extractor(
+            self, "show_interface_detail", self._send_command('show interface detail')
+        )
 
-        return  {
+        # Add ports to result
+        result =  {
             'untagged': [i['port'] for i in info if i['outboundtagged'] == 'untagged'],
-            'tagged': [i['port'] for i in info if i['outboundtagged'] == 'tagged'],
+            'tagged': [i['port'] for i in info if i['outboundtagged'] != 'untagged'],
         }
+        # Add vifs to result
+        for intf in interface_info:
+            result['untagged'].append(intf['vif'])
+
+        return result
 
     def open(self):
         """Implement the NAPALM method open (mandatory)"""
