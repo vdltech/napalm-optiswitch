@@ -167,23 +167,57 @@ class OptiswitchDriver(NetworkDriver):
 
         return ips
 
-    def get_interfaces_mode(self):
-        """ Return data on which interfaces are tagged/untagged """
-        info = textfsm_extractor(
+    def get_interfaces_vlans(self):
+        ''' return dict as documented at https://github.com/napalm-automation/napalm/issues/919#issuecomment-485905491 '''
+        port_info = textfsm_extractor(
             self, "show_port_details", self._send_command('show port details')
         )
         interface_info = textfsm_extractor(
             self, "show_interface_detail", self._send_command('show interface detail')
         )
 
-        # Add ports to result
-        result =  {
-            'untagged': [i['port'] for i in info if i['outboundtagged'] == 'untagged'],
-            'tagged': [i['port'] for i in info if i['outboundtagged'] != 'untagged'],
-        }
-        # Add vifs to result
-        for intf in interface_info:
-            result['untagged'].append(intf['vif'])
+        result = {}
+
+        # Add ports to results dict
+        for port in port_info:
+            if port['outboundtagged'] == 'untagged':
+                mode = 'access'
+            else:
+                mode = 'trunk'
+
+            result[port['port']] = {
+                'mode': mode,
+                'access-vlan': -1,
+                'trunk-vlans': [],
+                'native-vlan': -1,
+                'tagged-native-vlan': False
+            }
+
+        # Add interfaces to results dict, populate vlans from vifs
+        for interface in interface_info:
+            result[interface['vif']] = {
+                'mode': 'access',
+                'access-vlan': -1,
+                'trunk-vlans': [],
+                'native-vlan': -1,
+                'tagged-native-vlan': False
+            }
+
+            m = re.match(r'^vif(\d+)', interface['vif'])
+            if m:
+                vlan_id = int(m.group(1))
+                # Ignore VLANs higher than 4094
+                if vlan_id < 4095:
+
+                    # Add port and vif to list of interfaces
+                    for intf in self._expand_port_list(interface['ports']):
+                        if result[intf]['mode'] == 'access':
+                            result[intf]['access-vlan'] = vlan_id
+                        else:
+                            result[intf]['trunk-vlans'].append(vlan_id)
+
+                    result[interface['vif']]['access-vlan'] = vlan_id
+
 
         return result
 
