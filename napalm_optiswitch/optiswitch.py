@@ -47,6 +47,10 @@ class OptiswitchDriver(NetworkDriver):
         if optional_args is None:
             optional_args = {}
 
+        # Cache commands
+        self.show_port_details = None
+        self.lldp_ports = None
+
     def _send_command(self, command):
         """Wrapper for self.device.send.command().
         If command is a list will iterate through commands until valid command.
@@ -80,8 +84,11 @@ class OptiswitchDriver(NetworkDriver):
 
     def get_interfaces(self):
         """Get interface list"""
+        if not self.show_port_details:
+            self.show_port_details = self._send_command('show port details')
+
         ports = textfsm_extractor(
-            self, "show_port_details", self._send_command('show port details')
+            self, "show_port_details", self.show_port_details
         )
         interfaces = textfsm_extractor(
             self, "show_interface_detail", self._send_command('show interface detail')
@@ -220,6 +227,89 @@ class OptiswitchDriver(NetworkDriver):
 
 
         return result
+
+    def _get_lldp_ports(self):
+        if self.lldp_ports:
+            return self.lldp_ports
+
+        if not self.show_port_details:
+            self.show_port_details = self._send_command('show port details')
+
+        ports = textfsm_extractor(
+            self, "show_port_details", self.show_port_details
+        )
+
+        portnums = [int(d['port']) for d in ports]
+        portlist = "{}-{}".format(min(portnums), max(portnums))
+
+        lldp_ports = textfsm_extractor(
+            self, "show_lldp_port", self._send_command('show lldp port {}'.format(portlist))
+        )
+
+        return lldp_ports
+
+    def get_lldp_neighbors(self):
+        lldp_ports = self._get_lldp_ports()
+
+        result = {}
+        result.update({
+            i['port']: {
+                'hostname': i['remotesystemname'],
+                'port': i['remoteport'],
+            } for i in lldp_ports
+        })
+        return result
+
+    def get_lldp_neighbors_detail(self, interface=None):
+        lldp_ports = self._get_lldp_ports()
+
+
+        if interface:
+            lldp_ports = [d for d in lldp_ports if d['port'] == interface]
+
+        result = {}
+        result.update({
+            i['port']: {
+                'parent_interface': '',
+                'remote_chassis_id': i['remotechassisid'],
+                'remote_system_name': i['remotesystemname'],
+                'remote_port': i['remoteport'],
+                'remote_port_description': i['remoteport'],
+                'remote_system_description': i['remotesystemdescription'],
+                'remote_system_capab': self._lldp_system_capabilities(i['remotesystemcapab']),
+                'remote_system_enable_capab': self._lldp_system_enabled_capabilities(i['remotesystemcapab']),
+            } for i in lldp_ports
+        })
+
+        return result
+
+    def _lldp_system_enabled_capabilities(self, capabilities):
+        enabled_capabilities = []
+        for cap in self._lldp_valid_system_capabilities():
+            if any(cap in s.lower() and 'enabled' in s.lower() for s in capabilities):
+                enabled_capabilities.append(cap)
+
+        return enabled_capabilities
+
+    def _lldp_system_capabilities(self, capabilities):
+        system_capabilites = []
+        for cap in self._lldp_valid_system_capabilities():
+            if any(cap in s.lower() for s in capabilities):
+                system_capabilites.append(cap)
+
+        return system_capabilites
+
+    def _lldp_valid_system_capabilities(self):
+        return [
+            'other',
+            'repeater',
+            'bridge',
+            'wlan-access-point',
+            'router',
+            'telephone',
+            'docsis-cable-device',
+            'station',
+        ]
 
     def open(self):
         """Implement the NAPALM method open (mandatory)"""
