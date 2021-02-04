@@ -145,8 +145,8 @@ class OptiswitchDriver(NetworkDriver):
             m = re.match(r'^vif(\d+)', item['vif'])
             if m:
                 vlan_id = int(m.group(1))
-                # Ignore VLANs higher than 4094
-                if vlan_id < 4095:
+                # Ignore VLANs higher than 4094 and vifs that are down
+                if vlan_id < 4095 and item['linkstate'].lower() == 'up':
                     # Add port and vif to list of interfaces
                     interfaces = self._expand_port_list(item['ports'])
                     interfaces.append(item['vif'])
@@ -213,8 +213,8 @@ class OptiswitchDriver(NetworkDriver):
             m = re.match(r'^vif(\d+)', interface['vif'])
             if m:
                 vlan_id = int(m.group(1))
-                # Ignore VLANs higher than 4094
-                if vlan_id < 4095:
+                # Ignore VLANs higher than 4094 and vifs that are down
+                if vlan_id < 4095 and interface['linkstate'].lower() == 'up':
 
                     # Add port and vif to list of interfaces
                     for intf in self._expand_port_list(interface['ports']):
