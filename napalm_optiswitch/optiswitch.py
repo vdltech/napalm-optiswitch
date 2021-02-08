@@ -324,6 +324,7 @@ class OptiswitchDriver(NetworkDriver):
             username=self.username,
             password=self.password,
             timeout=self.timeout,
+            conn_timeout=self.timeout,
             global_delay_factor=global_delay_factor)
             #,
             #**self.netmiko_optional_args)
