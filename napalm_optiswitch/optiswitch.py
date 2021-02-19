@@ -242,7 +242,7 @@ class OptiswitchDriver(NetworkDriver):
             self, "show_port_details", self.show_port_details
         )
 
-        portnums = [int(d['port']) for d in ports]
+        portnums = [int(d['port']) for d in ports if re.match(r'^[0-9]', d['port'])]
         portlist = "{}-{}".format(min(portnums), max(portnums))
 
         lldp_ports = textfsm_extractor(
