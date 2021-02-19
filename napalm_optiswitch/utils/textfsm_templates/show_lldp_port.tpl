@@ -1,5 +1,5 @@
 Value Port (\d+)
-Value RemoteChassisId (\S+)
+Value Required RemoteChassisId (\S+)
 Value RemotePort (\S+)
 Value RemoteSystemName (\S+)
 Value RemoteSystemDescription (.*)

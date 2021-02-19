@@ -256,10 +256,10 @@ class OptiswitchDriver(NetworkDriver):
 
         result = {}
         result.update({
-            i['port']: {
+            i['port']: [{
                 'hostname': i['remotesystemname'],
                 'port': i['remoteport'],
-            } for i in lldp_ports
+            }] for i in lldp_ports
         })
         return result
 
