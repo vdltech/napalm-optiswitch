@@ -153,7 +153,11 @@ class OptiswitchDriver(NetworkDriver):
                     # Add port and vif to list of interfaces
                     interfaces = self._expand_port_list(item['ports'])
                     interfaces.append(item['vif'])
-                    vlans.update({vlan_id: {'name': item['name'], 'interfaces': interfaces}})
+                    # Fallback to description if name field not available
+                    name = item['name']
+                    if not name:
+                        name = item['description']
+                    vlans.update({vlan_id: {'name': name, 'interfaces': interfaces}})
 
         return vlans
 
