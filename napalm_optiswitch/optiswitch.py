@@ -57,6 +57,12 @@ class OptiswitchDriver(NetworkDriver):
         """
         return self.device.send_command(command)
 
+    def _send_command_timing(self, command):
+        """Wrapper for self.device.send.command_timing().
+        If command is a list will iterate through commands until valid command.
+        """
+        return self.device.send_command_timing(command, delay_factor=1)
+
     def _expand_port_list(self, portlist):
         """ Expand optiswitch portlist, ex 1,4,6-9 """
         ports = []
@@ -249,9 +255,15 @@ class OptiswitchDriver(NetworkDriver):
         portnums = [int(d['port']) for d in ports if re.match(r'^[0-9]', d['port'])]
         portlist = "{}-{}".format(min(portnums), max(portnums))
 
+        # Get into config-lldp mode
+        self._send_command_timing('config')
+        self._send_command_timing('lldp')
         lldp_ports = textfsm_extractor(
             self, "show_lldp_port", self._send_command('show lldp port {}'.format(portlist))
         )
+        # Exit config mode
+        self._send_command_timing('exit')
+        self._send_command_timing('exit')
 
         return lldp_ports
 
