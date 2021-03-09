@@ -255,15 +255,12 @@ class OptiswitchDriver(NetworkDriver):
         portnums = [int(d['port']) for d in ports if re.match(r'^[0-9]', d['port'])]
         portlist = "{}-{}".format(min(portnums), max(portnums))
 
-        # Get into config-lldp mode
-        self._send_command_timing('config')
-        self._send_command_timing('lldp')
         lldp_ports = textfsm_extractor(
-            self, "show_lldp_port", self._send_command('show lldp port {}'.format(portlist))
+            self, "show_lldp_port", self.device.send_config_set([
+                'lldp',
+                'show lldp port {}'.format(portlist)
+            ])
         )
-        # Exit config mode
-        self._send_command_timing('exit')
-        self._send_command_timing('exit')
 
         return lldp_ports
 
