@@ -268,20 +268,31 @@ class OptiswitchDriver(NetworkDriver):
         return lldp_ports
 
     def get_lldp_neighbors(self):
+        ''' on some systems, port description is the ifDescription value and port id is ifIndex.
+            on others, description is a value a human has entered for the port, and the id is the interface name.
+
+            We're doing our best here to find the most useful value that represents the interface name
+        '''
+
         lldp_ports = self._get_lldp_ports()
+        port_regex = re.compile('.*ethernet|^\d+$|^\d+\/\d+|^\d+\/[A-Z]\d+|^[A-Z]\d+$|^te|^xe|^ge|^gi', re.IGNORECASE)
 
         result = {}
-        result.update({
-            i['port']: [{
-                'hostname': i['remotesystemname'],
-                'port': i['remoteport'],
-            }] for i in lldp_ports
-        })
+        for i in lldp_ports:
+            if ' ' not in i['remoteport'] and ':' not in i['remoteport'] and re.match(port_regex, i['remoteport']) or not i['portid']:
+                port = i['remoteport']
+            else:
+                port = i['portid']
+            result.update({
+                i['port']: [{
+                    'hostname': i['remotesystemname'],
+                    'port': port,
+                }]
+            })
         return result
 
     def get_lldp_neighbors_detail(self, interface=None):
         lldp_ports = self._get_lldp_ports()
-
 
         if interface:
             lldp_ports = [d for d in lldp_ports if d['port'] == interface]
