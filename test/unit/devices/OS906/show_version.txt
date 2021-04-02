@@ -1,0 +1,57 @@
+MRV OptiSwitch 906C
+===========================
+Hardware
+--------
+Board serial number   : 1120100736
+Unit serial number    : 1121100231
+
+CPU: FERO5181, 400Mhz with 64MB flash and 256MB Dram memory
+CPU Hardware: id 1, version 1
+NOR Flash
+Device Hardware version: 1
+Device temperature: 26C / 78F (normal)
+
+FPGA HW type: 2
+FPGA version: 0x36
+
+Power Supplies:
+unit 1 AC: INSTALLED & ACTIVE
+unit 2 AC: INSTALLED & ACTIVE
+
+Fans:
+Fan 1: ACTIVE
+
+Valid ports: 1-6
+
+Software
+--------
+MasterOS version: 2_2_2
+Build time: Tue Nov  5 10:06:57 IST 2013
+Based on:
+Linux MR-OS906-C-2-ATP01-US 2.6.22.7 #948 Mon Dec 3 17:50:58 IST 2012 armv5tejl
+ZebOS 5.2 (arm-none-linux-gnueabi).
+Driver v1.9.5, cpssDxCh cpss3.4 drop#2
+
+Base MAC address: 3C:A7:2B:00:00:29
+
+Supported features:
+-------------------
+MSTP -     Yes
+G.8031 -   Yes
+G.8032 -   Yes
+sFlow  -   No
+ROUTING -  Yes
+RIP -      Yes
+OSPF -     Yes
+ISIS -     No
+BGP -      Yes
+MPLS -     No
+LDP -      No
+RSVP -     No
+WEB -      No
+IPv6 -     Yes; Currently - disabled
+Secure Push -  Not Active
+Nextragen SIP test agent -   Yes
+
+up 717 days 20:45
+users: remote - 1, console is closed

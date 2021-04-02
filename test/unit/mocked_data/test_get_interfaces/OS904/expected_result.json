@@ -1,0 +1,65 @@
+{
+  "1": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "CUSTOMER-HANDOFF",
+    "speed": 1000,
+    "mtu": -1,
+    "last_flapped": -1,
+    "mac_address": "a4:60:32:00:5a:e2"
+  },
+  "2": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "TO:HP-SWITCH1:15",
+    "speed": 1000,
+    "mtu": -1,
+    "last_flapped": -1,
+    "mac_address": "a4:60:32:00:5a:e2"
+  },
+  "3": {
+    "is_up": false,
+    "is_enabled": false,
+    "description": "Port 3 - ETH100/1000",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1,
+    "mac_address": "a4:60:32:00:5a:e2"
+  },
+  "4": {
+    "is_up": false,
+    "is_enabled": false,
+    "description": "Port 4 - ETH100/1000",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1,
+    "mac_address": "a4:60:32:00:5a:e2"
+  },
+  "vif472": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1,
+    "mac_address": "a4:60:32:00:5a:e2"
+  },
+  "vif1620": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "P2P:GATE-HOUSE-to-ARBOR",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1,
+    "mac_address": "a4:60:32:00:5a:e2"
+  },
+  "vif4095": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "Internal interface for ETH OAM FPGA port, NOT for USER.",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1,
+    "mac_address": "a4:60:32:00:5a:e2"
+  }
+}

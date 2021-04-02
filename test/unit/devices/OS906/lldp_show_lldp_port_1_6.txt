@@ -1,0 +1,27 @@
+ Port 1
+=========
+No lldp info received
+ Port 2
+=========
+Chassis id          : cc:4e:24:17:67:e8
+Port id             : �N$g�
+TTL                 : 120
+Port Description    : 10GigabitEthernet1/1/14
+System name         : DUMMYSWITCH
+System description  :
+System Capabilities :
+                      Bridge/Switch (enabled)
+                      Router (enabled)
+Management address  : (subtype is IPv4) 10.64.80.14; ifIndex 16777219
+ Port 3
+=========
+No lldp info received
+ Port 4
+=========
+No lldp info received
+ Port 5
+=========
+No lldp info received
+ Port 6
+=========
+No lldp info received

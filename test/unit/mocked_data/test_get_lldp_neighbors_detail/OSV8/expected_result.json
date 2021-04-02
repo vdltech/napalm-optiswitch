@@ -1,0 +1,37 @@
+{
+  "2": [
+    {
+      "parent_interface": "",
+      "remote_chassis_id": "e0:23:ff:5d:eb:81",
+      "remote_system_name": "DUMMYFIREWALL",
+      "remote_port": "",
+      "remote_port_description": "",
+      "remote_system_description": "FortiGate-601E v6.4.2,build1723,200729 (GA)",
+      "remote_system_capab": [
+        "bridge",
+        "router"
+      ],
+      "remote_system_enable_capab": [
+        "router"
+      ]
+    }
+  ],
+  "8": [
+    {
+      "parent_interface": "",
+      "remote_chassis_id": "00:24:38:ad:e0:00",
+      "remote_system_name": "DUMMYROUTER",
+      "remote_port": "10GigabitEthernet2/13",
+      "remote_port_description": "10GigabitEthernet2/13",
+      "remote_system_description": "",
+      "remote_system_capab": [
+        "bridge",
+        "router"
+      ],
+      "remote_system_enable_capab": [
+        "bridge",
+        "router"
+      ]
+    }
+  ]
+}

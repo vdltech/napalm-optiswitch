@@ -1,0 +1,73 @@
+vif472 is UP (2674w4d8h29m35s)
+  Name: CN-VLAN
+  Active: Yes
+  Ports: 2
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 472
+  MAC address is a4:60:32:00:5a:e2
+  IP address is 10.99.99.250/24
+  CPU-membership is enable
+  SSH can be accessed from  10.0.0.0/8
+  Telnet can be accessed from 10.0.0.0/8
+  SNMP can be accessed from 10.0.0.0/8
+  TFTP can be accessed from  10.0.0.0/8
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  IP forwarding is enabled
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined
+vif1620 is UP (2674w4d8h29m35s)
+  Description: P2P:GATE-HOUSE-to-ARBOR
+  Active: Yes
+  Ports: 1-2
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 1620
+  MAC address is a4:60:32:00:5a:e2
+  IP address is not defined
+  CPU-membership is disable
+  Management access is denied
+  TFTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined
+vif4095 is UP (No state changes have occurred)
+  Name: agFPGA
+  Description: Internal interface for ETH OAM FPGA port, NOT for USER.
+  Active: Yes
+  Ports:
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 4095
+  MAC address is a4:60:32:00:5a:e2
+  IP address is not defined
+  CPU-membership is enable
+  Management access is denied
+  TFTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined

@@ -15,4 +15,4 @@ Start
   ^System description\s+: ${RemoteSystemDescription}
   ^System Capabilities :
   ^\s+${RemoteSystemCapab} -> Continue
-  ^Management address -> Record
+  ^(Management address)?\s+: -> Record

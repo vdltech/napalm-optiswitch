@@ -1,12 +1,11 @@
+# -*- coding: iso-8859-15 -*-
 """setup.py file."""
-
-import uuid
 
 from setuptools import setup, find_packages
 
-__author__ = 'Fredrik Rönnvall <fredronn@gmail.com>'
+__author__ = "Fredrik Rönnvall <fred@vdltech.net>"
 
-with open('requirements.txt') as f:
+with open("requirements.txt") as f:
     install_requires = f.read().strip().splitlines()
 
 setup(
@@ -14,17 +13,17 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     author="Fredrik Rönnvall",
-    author_email="fredronn@gmail.com",
+    author_email="fredr@vdltech.net",
     description="Network Automation and Programmability Abstraction Layer with Multivendor support",
     classifiers=[
-        'Topic :: Utilities',
-         'Programming Language :: Python',
-         'Programming Language :: Python :: 2',
-         'Programming Language :: Python :: 2.7',
-        'Operating System :: POSIX :: Linux',
-        'Operating System :: MacOS',
+        "Topic :: Utilities",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.7",
+        "Operating System :: POSIX :: Linux",
+        "Operating System :: MacOS",
     ],
-    url="https://github.com/fredronnv/napalm-optiswitch",
+    url="https://github.com/vdltech/napalm-optiswitch",
     include_package_data=True,
     install_requires=install_requires,
 )

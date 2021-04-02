@@ -1,0 +1,18 @@
+{
+  "427": {
+    "name": "CN-VLAN",
+    "interfaces": [
+      "2",
+      "8",
+      "vif427"
+    ]
+  },
+  "1823": {
+    "name": "CUSTOMER-VLAN",
+    "interfaces": [
+      "5",
+      "8",
+      "vif1823"
+    ]
+  }
+}

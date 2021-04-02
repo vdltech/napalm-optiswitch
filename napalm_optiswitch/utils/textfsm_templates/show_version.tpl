@@ -1,11 +1,18 @@
 Value Model (OptiSwitch \S+)
 Value ValidPorts ([\d\-]+)
 Value SerialNumber (\d+)
-Value MasterOS (\S+\s\(\d+\))
+Value MasterOS (.*)
+Value BaseMAC (\S+)
+Value UptimeDays (\d+)
+Value UptimeHours (\d+)
+Value UptimeMins (\d+)
+
 
 Start
   ^MRV ${Model}
   ^Unit serial number\s+: ${SerialNumber}
   ^Valid ports: ${ValidPorts}
   ^MasterOS version: ${MasterOS}
+  ^Base MAC address: ${BaseMAC}
+  ^up (${UptimeDays} days)?\s+${UptimeHours}:${UptimeMins}
 

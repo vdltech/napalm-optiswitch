@@ -1,0 +1,1 @@
+../../../devices/OS940/show_port_details.txt

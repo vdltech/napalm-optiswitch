@@ -1,0 +1,101 @@
+{
+  "1": {
+    "is_up": false,
+    "is_enabled": false,
+    "description": "Port 1 - ETH10/100/1000",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "2": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "DUMMYFIREWALL:MGMT",
+    "speed": 1000,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "3": {
+    "is_up": false,
+    "is_enabled": false,
+    "description": "Port 3 - ETH10/100/1000",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "4": {
+    "is_up": false,
+    "is_enabled": false,
+    "description": "Port 4 - ETH10/100/1000",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "5": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "DUMMYFIREWALL:X2:1G-ABC",
+    "speed": 10000,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "6": {
+    "is_up": false,
+    "is_enabled": false,
+    "description": "Port 6 - ETH1000/10000",
+    "speed": 10000,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "7": {
+    "is_up": false,
+    "is_enabled": false,
+    "description": "Port 7 - ETH1000/10000",
+    "speed": 10000,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "8": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "TO:DUMMYROUTER:2/13",
+    "speed": 10000,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "vif427": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "vif1823": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  },
+  "eth0": {
+    "is_up": false,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 0,
+    "last_flapped": -1.0,
+    "mac_address": ""
+  }
+}

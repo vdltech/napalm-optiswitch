@@ -1,0 +1,58 @@
+MRV OptiSwitch 904
+=========================
+Hardware
+--------
+Board serial number   : 1517100495
+Unit serial number    : 1519100024
+
+CPU: FERO5181, 400Mhz with 64MB flash and 256MB Dram memory
+CPU Hardware: id 1, version 1
+NOR Flash
+Device Hardware version: 3
+Device temperature: 39C / 102F (normal)
+
+FPGA HW type: 2
+FPGA version: 0x36
+
+Power Supplies:
+unit 1 AC: INSTALLED & ACTIVE
+
+Fans:
+Fan 1: ACTIVE
+
+Valid ports: 1-4
+
+Software
+--------
+MasterOS version: 4_5_6 (19000)
+Build time: 19-03-2017
+Based on:
+Linux MR-OS904-C-1-AGP02-GB 2.6.22.7-gb7dbbec6 #2 Sun Mar 19 11:43:12 IST 2017 armv5tejl
+ZebOS version 7.9.1 IPIRouter 06/28/12 13:37:24
+ Build # is ZebOS-7-9-1-IPI on host arm-none-linux-gnueabi
+ Copyright (C) 2001-2011 IP Infusion Inc.  All rights reserved.
+Driver v1.9.5, cpssDxCh cpss3.4 drop#2
+
+Base MAC address: a4:60:32:00:5a:e2
+
+Supported features:
+-------------------
+MSTP -     Yes
+G.8031 -   Yes
+G.8032 -   Yes
+sFlow  -   No
+RIP -      No
+OSPF -     No
+ISIS -     No
+BGP -      No
+RSVP -     No
+LDP -      No
+WEB -      No
+IPv6 -     Yes; Currently - disabled
+MPLS -     Not Active
+Routing -  Not Active
+Nextragen SIP test agent -   Yes
+
+up 235 days 17:10
+users: remote - 1, console is closed
+Last boot cause: POWER-OFF

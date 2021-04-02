@@ -1,0 +1,18 @@
+{
+  "hostname": "127.0.0.1",
+  "fqdn": "false",
+  "interface_list" : [
+      "1",
+      "2",
+      "3",
+      "4",
+      "vif472",
+      "vif1620",
+      "vif4095"
+    ],
+  "model" : "OptiSwitch 904",
+  "os_version": "4_5_6 (19000)",
+  "serial_number" : "1519100024",
+  "uptime": 20365800,
+  "vendor" : "MRV"
+}

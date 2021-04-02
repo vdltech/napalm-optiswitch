@@ -1,0 +1,44 @@
+ Port 1
+=========
+No lldp info received
+ Port 2
+=========
+Chassis id          : e0:23:ff:5d:eb:81
+Port id             : �#�]�
+TTL                 : 120
+Time remaining      : 111 seconds
+Port Description    :
+System name         : DUMMYFIREWALL
+System description  : FortiGate-601E v6.4.2,build1723,200729 (GA)
+System Capabilities :
+                      Bridge/Switch (disabled)
+                      Router (enabled)
+Management address  : (subtype is IPv4) 10.88.88.246; ifIndex 2
+ Port 3
+=========
+No lldp info received
+ Port 4
+=========
+No lldp info received
+ Port 5
+=========
+No lldp info received
+ Port 6
+=========
+No lldp info received
+ Port 7
+=========
+No lldp info received
+ Port 8
+=========
+Chassis id          : 00:24:38:ad:e0:00
+Port id             :
+TTL                 : 120
+Time remaining      : 113 seconds
+Port Description    : 10GigabitEthernet2/13
+System name         : DUMMYROUTER
+System description  :
+System Capabilities :
+                      Bridge/Switch (enabled)
+                      Router (enabled)
+Management address  : (subtype is IPv4) 93.20.8.25; ifIndex 16779039
