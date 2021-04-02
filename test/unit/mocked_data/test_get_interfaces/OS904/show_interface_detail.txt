@@ -1,0 +1,1 @@
+../../../devices/OS904/show_interface_detail.txt

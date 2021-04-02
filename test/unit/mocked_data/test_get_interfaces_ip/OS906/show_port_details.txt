@@ -1,0 +1,1 @@
+../../../devices/OS906/show_port_details.txt

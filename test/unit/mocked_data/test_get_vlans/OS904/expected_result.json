@@ -1,0 +1,18 @@
+{
+  "472": {
+    "interfaces": [
+      "2",
+      "vif472"
+    ],
+    "name": "CN-VLAN"
+  },
+  "1620": {
+    "interfaces": [
+      "1",
+      "2",
+      "vif1620"
+    ],
+    "name": "P2P:GATE-HOUSE-to-ARBOR"
+  }
+}
+

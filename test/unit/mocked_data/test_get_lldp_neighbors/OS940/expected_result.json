@@ -1,0 +1,20 @@
+{
+  "3": [
+    {
+      "hostname": "LNDLNLEXB503",
+      "port": "5"
+    }
+  ],
+  "14": [
+    {
+      "hostname": "GBLON-PS-LEX-BS-AS-1",
+      "port": "xe-1/0/23"
+    }
+  ],
+  "16": [
+    {
+      "hostname": "DUMMYROUTER",
+      "port": "10GigabitEthernet2/23"
+    }
+  ]
+}

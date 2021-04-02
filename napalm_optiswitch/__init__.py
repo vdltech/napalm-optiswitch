@@ -15,4 +15,4 @@
 """napalm-skeleton package."""
 from napalm_optiswitch.optiswitch import OptiswitchDriver  # noqa
 
-__all__ = ('OptiswitchDriver',)
+__all__ = ("OptiswitchDriver",)

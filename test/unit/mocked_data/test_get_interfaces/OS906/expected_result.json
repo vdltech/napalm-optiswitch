@@ -1,0 +1,119 @@
+{
+  "1": {
+    "is_up": false,
+    "is_enabled": true,
+    "description": "Available-IF",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "2": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "SWITCH1::1/1/14",
+    "speed": 1000,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "3": {
+    "is_up": false,
+    "is_enabled": true,
+    "description": "Available-IF",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "4": {
+    "is_up": false,
+    "is_enabled": false,
+    "description": "Available-IF",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "5": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "CPE-P5",
+    "speed": 1000,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "6": {
+    "is_up": false,
+    "is_enabled": true,
+    "description": "Available-IF",
+    "speed": -1,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "vif10": {
+    "is_up": false,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "vif69": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "vif1234": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "vif3801": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "vif3815": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "vif4095": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "Internal interface for ETH OAM FPGA port, NOT for USER.",
+    "speed": -1,
+    "mtu": 1500,
+    "last_flapped": -1.0,
+    "mac_address": "3C:A7:2B:00:00:29"
+  },
+  "eth0": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "",
+    "speed": -1,
+    "mtu": 0,
+    "last_flapped": -1.0,
+    "mac_address": ""
+  }
+}

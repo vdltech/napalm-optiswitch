@@ -1,0 +1,240 @@
+vif10 is DOWN (50w5d11h31m10s)
+  Name: DELETE-ME
+  Active: Yes
+  Ports: 6
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 10
+  MAC address is 3C:A7:2B:00:00:29
+  IP address is not defined
+  IPv6 local address is fe80::2a7:2bff:fe00:0029/64
+  CPU-membership is disable
+  Management access is denied
+  TFTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined
+
+vif69 is UP (72w1d21h16m8s)
+  Name: loss-test
+  Active: Yes
+  Ports: 2
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 69
+  rfc2544 mac-to-responder 3C:A7:2B:01:00:29
+  MAC address is 3C:A7:2B:00:00:29
+  IP address is not defined
+  IPv6 local address is fe80::2a7:2bff:fe00:0029/64
+  CPU-membership is disable
+  Management access is denied
+  TFTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined
+
+vif1234 is UP (72w1d21h16m8s)
+  Active: Yes
+  Ports: 2
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 1234
+  rfc2544 mac-to-responder 3C:A7:2B:03:00:29
+  MAC address is 3C:A7:2B:00:00:29
+  IP address is 192.168.1.5/29
+  IPv6 local address is fe80::2a7:2bff:fe00:0029/64
+  CPU-membership is enable
+  Management access is denied
+  TFTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  IP forwarding is enabled
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined
+
+vif3801 is UP (839w0d16h40m30s)
+  Name: UNTRUST
+  Active: Yes
+  Ports: 1-2
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 3801
+  rfc2544 mac-to-responder 3C:A7:2B:01:00:29
+  MAC address is 3C:A7:2B:00:00:29
+  IP address is 192.168.192.1/30
+  IPv6 local address is fe80::2a7:2bff:fe00:0029/64
+  CPU-membership is enable
+  Management access is denied
+  TFTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  IP forwarding is enabled
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined
+
+vif3815 is UP (839w0d16h40m18s)
+  Name: SRX-UT-VL
+  Active: Yes
+  Ports: 2-3
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 3815
+  MAC address is 3C:A7:2B:00:00:29
+  IP address is not defined
+  IPv6 local address is fe80::2a7:2bff:fe00:0029/64
+  CPU-membership is disable
+  Management access is denied
+  TFTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined
+
+vif4095 is UP (No state changes have occurred)
+  Name: agFPGA
+  Description: Internal interface for ETH OAM FPGA port, NOT for USER.
+  Active: Yes
+  Ports:
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 4095
+  MAC address is 3C:A7:2B:00:00:29
+  IP address is not defined
+  IPv6 local address is fe80::2a7:2bff:fe00:0029/64
+  CPU-membership is enable
+  Management access is denied
+  TFTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  Lt learning is enabled
+  Access-group is not defined
+
+eth0 is UP (No state changes have occurred)
+  Name: CUST-DCN
+  Active: Yes
+  Interface type is Out-of-band
+  IP address is 10.22.22.11/24
+  IPv6 local address is fe80::2a7:2bff:fe00:0029/64
+  CPU-membership is enable
+  SSH can be accessed from  10.0.0.0/8
+  Telnet can be accessed from 10.0.0.0/8
+  SNMP can be accessed from 10.0.0.0/8
+  TFTP can be accessed from  10.0.0.0/8
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  IP forwarding is disabled
+  MTU Profile: 1
+  Lt learning is enabled
+  Access-group is not defined
+
+vif10 NSM info:
+  index 6, metric 1, mtu 1500 <UP,BROADCAST,RUNNING,MULTICAST>
+  HWaddr: 3c:a7:2b:00:00:29
+  Bandwidth 10m
+    input packets 0, bytes 0, dropped 0, multicast packets 0
+    input errors 0, length 0, overrun 0, CRC 0, frame 0, fifo 0, missed 0
+    output packets 0, bytes 0, dropped 0
+    output errors 0, aborted 0, carrier 0, fifo 0, heartbeat 0, window 0
+    collisions 0
+
+vif69 NSM info:
+  index 10, metric 1, mtu 1500 <UP,BROADCAST,RUNNING,MULTICAST>
+  HWaddr: 3c:a7:2b:00:00:29
+  Bandwidth 10m
+    input packets 0, bytes 0, dropped 0, multicast packets 0
+    input errors 0, length 0, overrun 0, CRC 0, frame 0, fifo 0, missed 0
+    output packets 0, bytes 0, dropped 0
+    output errors 0, aborted 0, carrier 0, fifo 0, heartbeat 0, window 0
+    collisions 0
+
+vif1234 NSM info:
+  index 9, metric 1, mtu 1500 <UP,BROADCAST,RUNNING,MULTICAST>
+  HWaddr: 3c:a7:2b:00:00:29
+  Bandwidth 10m
+  inet 192.168.1.5/29 broadcast 192.168.1.7
+    input packets 1339394, bytes 85721292, dropped 0, multicast packets 0
+    input errors 0, length 0, overrun 0, CRC 0, frame 0, fifo 0, missed 0
+    output packets 6, bytes 364, dropped 0
+    output errors 0, aborted 0, carrier 0, fifo 0, heartbeat 0, window 0
+    collisions 0
+
+vif3801 NSM info:
+  index 7, metric 1, mtu 1500 <UP,BROADCAST,RUNNING,MULTICAST>
+  HWaddr: 3c:a7:2b:00:00:29
+  Bandwidth 10m
+  inet 192.168.192.1/30 broadcast 192.168.192.3
+    input packets 5841209, bytes 373837376, dropped 0, multicast packets 0
+    input errors 0, length 0, overrun 0, CRC 0, frame 0, fifo 0, missed 0
+    output packets 0, bytes 0, dropped 0
+    output errors 0, aborted 0, carrier 0, fifo 0, heartbeat 0, window 0
+    collisions 0
+
+vif3815 NSM info:
+  index 8, metric 1, mtu 1500 <UP,BROADCAST,RUNNING,MULTICAST>
+  HWaddr: 3c:a7:2b:00:00:29
+  Bandwidth 10m
+    input packets 0, bytes 0, dropped 0, multicast packets 0
+    input errors 0, length 0, overrun 0, CRC 0, frame 0, fifo 0, missed 0
+    output packets 0, bytes 0, dropped 0
+    output errors 0, aborted 0, carrier 0, fifo 0, heartbeat 0, window 0
+    collisions 0
+
+vif4095 NSM info:
+  index 5, metric 1, mtu 1500 <UP,BROADCAST,RUNNING,MULTICAST>
+  HWaddr: 3c:a7:2b:00:00:29
+  Bandwidth 10m
+    input packets 0, bytes 0, dropped 0, multicast packets 0
+    input errors 0, length 0, overrun 0, CRC 0, frame 0, fifo 0, missed 0
+    output packets 0, bytes 0, dropped 0
+    output errors 0, aborted 0, carrier 0, fifo 0, heartbeat 0, window 0
+    collisions 0

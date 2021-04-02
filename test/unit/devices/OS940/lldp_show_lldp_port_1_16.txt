@@ -1,0 +1,72 @@
+ Port 1
+=========
+No lldp info received
+ Port 2
+=========
+No lldp info received
+ Port 3
+=========
+Chassis id          : 9c:dc:71:39:ff:c0
+Port id             : 5
+TTL                 : 120
+Port Description    : 5
+System name         : LNDLNLEXB503
+System description  : Aruba JL254A 2930F-48G-4SFP+ Switch, revision WC.16.02.0014, ROM WC.16.01.0003 (/ws/swbuildm/rel_spokane_qaoff/code/build/lvm(swbuildm_rel_spokane_qaoff_rel_spokane))
+System Capabilities :
+                      Bridge/Switch (enabled)
+                      Router (disabled)
+Management address  : (subtype is IPv4) 10.14.44.125; ifIndex 0
+ Port 4
+=========
+No lldp info received
+ Port 5
+=========
+No lldp info received
+ Port 6
+=========
+No lldp info received
+ Port 7
+=========
+No lldp info received
+ Port 9
+=========
+No lldp info received
+ Port 10
+=========
+No lldp info received
+ Port 11
+=========
+No lldp info received
+ Port 12
+=========
+No lldp info received
+ Port 13
+=========
+No lldp info received
+ Port 14
+=========
+Chassis id          : 88:a2:5e:5a:ab:e0
+Port id             : 735
+TTL                 : 120
+Port Description    : xe-1/0/23
+System name         : GBLON-PS-LEX-BS-AS-1
+System description  : Juniper Networks, Inc. qfx5100-48s-6q Ethernet Switch, kernel JUNOS 14.1X53-D40.8, Build date: 2016-11-09 02:17:36 UTC Copyright (c) 1996-2016 Juniper Networks, Inc.
+System Capabilities :
+                      Bridge/Switch (enabled)
+                      Router (enabled)
+                    : (subtype is IPv4) 10.14.44.16; ifIndex 35
+ Port 15
+=========
+No lldp info received
+ Port 16
+=========
+Chassis id          : 00:24:38:ad:e0:00
+Port id             :
+TTL                 : 120
+Port Description    : 10GigabitEthernet2/23
+System name         : DUMMYROUTER
+System description  :
+System Capabilities :
+                      Bridge/Switch (enabled)
+                      Router (enabled)
+                    : (subtype is IPv4) 10.10.9.5; ifIndex 16778630

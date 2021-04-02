@@ -1,0 +1,22 @@
+{
+  "hostname": "127.0.0.1",
+  "fqdn": "false",
+  "vendor": "MRV",
+  "model": "",
+  "serial_number": "2011100084",
+  "interface_list": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "vif427",
+    "vif1823",
+    "eth0"
+  ],
+  "os_version": "19_2_1 (15071)",
+  "uptime": 18040980
+}

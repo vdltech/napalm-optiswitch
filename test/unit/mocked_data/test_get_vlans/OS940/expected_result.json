@@ -1,0 +1,57 @@
+{
+  "427": {
+    "name": "CN-VLAN",
+    "interfaces": [
+      "16",
+      "vif427"
+    ]
+  },
+  "1414": {
+    "name": "MPLS-P2P",
+    "interfaces": [
+      "1",
+      "16",
+      "vif1414"
+    ]
+  },
+  "1416": {
+    "name": "ABC-P2P",
+    "interfaces": [
+      "1",
+      "16",
+      "vif1416"
+    ]
+  },
+  "1458": {
+    "name": "P2P-LOND-CARDIFF",
+    "interfaces": [
+      "3",
+      "16",
+      "vif1458"
+    ]
+  },
+  "1613": {
+    "name": "INTERNET-ONLY",
+    "interfaces": [
+      "2",
+      "16",
+      "vif1613"
+    ]
+  },
+  "1653": {
+    "name": "WINDOW2",
+    "interfaces": [
+      "13",
+      "16",
+      "vif1653"
+    ]
+  },
+  "1710": {
+    "name": "PW-P2P-VL",
+    "interfaces": [
+      "14",
+      "15",
+      "vif1710"
+    ]
+  }
+}

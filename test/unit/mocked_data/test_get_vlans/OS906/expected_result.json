@@ -1,0 +1,32 @@
+{
+  "69": {
+    "name": "loss-test",
+    "interfaces": [
+      "2",
+      "vif69"
+    ]
+  },
+  "1234": {
+    "name": "",
+    "interfaces": [
+      "2",
+      "vif1234"
+    ]
+  },
+  "3801": {
+    "name": "UNTRUST",
+    "interfaces": [
+      "1",
+      "2",
+      "vif3801"
+    ]
+  },
+  "3815": {
+    "name": "SRX-UT-VL",
+    "interfaces": [
+      "2",
+      "3",
+      "vif3815"
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+Port 1 details:
+-------------------
+Description         : Available-IF
+Type                : ETH10/100/1000
+Media-select mode   : AUTO
+Link                : OFF (51w4d11h53m48s)
+Duplex state        : N/A
+PHY                 : COMBO+100FX
+Speed selected      : AUTO
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : untagged
+Tags List           : 3801
+DEI Remarking       : Error
+UDLD Protocol       : -
+Flood limiting      : rate 10m
+Flood limiting      : unknown-unicast
+Flood limiting      : multicast
+Flood limiting      : broadcast
+
+Port 2 details:
+-------------------
+Description         : SWITCH1::1/1/14
+Type                : ETH10/100/1000
+Media-select mode   : SFP
+Link                : ON Sfp (72w1d21h16m2s)
+Duplex state        : FULL
+PHY                 : COMBO+100FX
+Speed selected      : AUTO
+Actual speed        :  1 Gbps
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+Tags List           : 69,1234,3801,3815
+DEI Remarking       : Error
+UDLD Protocol       : -
+
+Port 3 details:
+-------------------
+Description         : Available-IF
+Type                : ETH10/100/1000
+Media-select mode   : AUTO
+Link                : OFF (51w4d11h52m34s)
+Duplex state        : N/A
+PHY                 : COMBO+100FX
+Speed selected      : AUTO
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Egress-shaping      : rate 300m, burst-size 1M
+Ingress-shaping      : rate 300m, burst-size 1M
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : untagged
+Tags List           : 3815
+DEI Remarking       : Error
+UDLD Protocol       : -
+
+Port 4 details:
+-------------------
+Description         : Available-IF
+Type                : ETH10/100/1000
+Media-select mode   : AUTO
+Link                : OFF (839w0d16h40m55s)
+Duplex state        : N/A
+PHY                 : COMBO+100FX
+Speed selected      : AUTO
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : DISABLE (Manual)
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : untagged
+DEI Remarking       : Error
+UDLD Protocol       : -
+
+Port 5 details:
+-------------------
+Description         : CPE-P5
+Type                : ETH10/100/1000
+Media-select mode   : AUTO
+--More--
+Link                : ON Copper (839w0d16h39m57s)
+Duplex state        : FULL
+PHY                 : COMBO+100FX
+Speed selected      : AUTO
+Actual speed        :  1 Gbps
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Actual cross mode   : MDI
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+DEI Remarking       : Error
+UDLD Protocol       : -
+
+Port 6 details:
+-------------------
+Description         : Available-IF
+Type                : ETH10/100/1000
+Media-select mode   : AUTO
+Link                : OFF (50w5d11h31m4s)
+Duplex state        : N/A
+PHY                 : COMBO+100FX
+Speed selected      : AUTO
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+Tags List           : 10
+DEI Remarking       : Error
+UDLD Protocol       : -

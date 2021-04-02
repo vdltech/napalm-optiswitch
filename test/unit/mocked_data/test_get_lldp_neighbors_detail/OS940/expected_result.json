@@ -1,0 +1,55 @@
+{
+  "3": [
+    {
+      "parent_interface": "",
+      "remote_chassis_id": "9c:dc:71:39:ff:c0",
+      "remote_system_name": "LNDLNLEXB503",
+      "remote_port": "5",
+      "remote_port_description": "5",
+      "remote_system_description": "Aruba JL254A 2930F-48G-4SFP+ Switch, revision WC.16.02.0014, ROM WC.16.01.0003 (/ws/swbuildm/rel_spokane_qaoff/code/build/lvm(swbuildm_rel_spokane_qaoff_rel_spokane))",
+      "remote_system_capab": [
+        "bridge",
+        "router"
+      ],
+      "remote_system_enable_capab": [
+        "bridge"
+      ]
+    }
+  ],
+  "14": [
+    {
+      "parent_interface": "",
+      "remote_chassis_id": "88:a2:5e:5a:ab:e0",
+      "remote_system_name": "GBLON-PS-LEX-BS-AS-1",
+      "remote_port": "xe-1/0/23",
+      "remote_port_description": "xe-1/0/23",
+      "remote_system_description": "Juniper Networks, Inc. qfx5100-48s-6q Ethernet Switch, kernel JUNOS 14.1X53-D40.8, Build date: 2016-11-09 02:17:36 UTC Copyright (c) 1996-2016 Juniper Networks, Inc.",
+      "remote_system_capab": [
+        "bridge",
+        "router"
+      ],
+      "remote_system_enable_capab": [
+        "bridge",
+        "router"
+      ]
+    }
+  ],
+  "16": [
+    {
+      "parent_interface": "",
+      "remote_chassis_id": "00:24:38:ad:e0:00",
+      "remote_system_name": "DUMMYROUTER",
+      "remote_port": "10GigabitEthernet2/23",
+      "remote_port_description": "10GigabitEthernet2/23",
+      "remote_system_description": "",
+      "remote_system_capab": [
+        "bridge",
+        "router"
+      ],
+      "remote_system_enable_capab": [
+        "bridge",
+        "router"
+      ]
+    }
+  ]
+}

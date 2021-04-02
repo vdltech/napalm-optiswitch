@@ -1,0 +1,14 @@
+{
+  "2": [
+    {
+      "hostname": "DUMMYFIREWALL",
+      "port": "\ufffd#\ufffd]\ufffd"
+    }
+  ],
+  "8": [
+    {
+      "hostname": "DUMMYROUTER",
+      "port": "10GigabitEthernet2/13"
+    }
+  ]
+}
