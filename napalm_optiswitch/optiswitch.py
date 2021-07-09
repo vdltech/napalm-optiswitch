@@ -53,7 +53,7 @@ class OptiswitchDriver(NetworkDriver):
         return self.device.send_command_timing(command, delay_factor=1)
 
     def _expand_port_list(self, portlist):
-        """ Expand optiswitch portlist, ex 1,4,6-9 """
+        """Expand optiswitch portlist, ex 1,4,6-9"""
         ports = []
         if portlist:
             for section in portlist.split(","):
@@ -70,7 +70,7 @@ class OptiswitchDriver(NetworkDriver):
         return [str(p) for p in ports]
 
     def _convert_speed(self, speed):
-        """ Convert speed to Mbit (int) """
+        """Convert speed to Mbit (int)"""
         m = re.match(r"^(?P<speed>\d+)\s*(?P<prefix>[MG])bps", speed)
         if m:
             speed = int(m.group("speed"))
@@ -81,7 +81,7 @@ class OptiswitchDriver(NetworkDriver):
         return int(speed)
 
     def _convert_mtu(self, mtu):
-        """ convert mtu to int if exists """
+        """convert mtu to int if exists"""
         if mtu.isdigit():
             return int(mtu)
         else:
@@ -139,11 +139,13 @@ class OptiswitchDriver(NetworkDriver):
         for i in interfaces:
             interface_list.append(i["vif"])
 
-        uptime = (
-            (int(info["uptimedays"]) * 86400)
-            + (int(info["uptimehours"]) * 3600)
-            + (int(info["uptimemins"]) * 60)
-        )
+        uptime = 0
+        if info["uptimedays"]:
+            uptime += int(info["uptimedays"]) * 86400
+        if info["uptimehours"]:
+            uptime += int(info["uptimehours"]) * 3600
+        if info["uptimemins"]:
+            uptime += int(info["uptimemins"]) * 60
 
         return {
             "hostname": self.hostname,
