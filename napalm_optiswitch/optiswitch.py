@@ -213,7 +213,7 @@ class OptiswitchDriver(NetworkDriver):
             else:
                 mode = "trunk"
 
-            result[port["port"]] = {
+            result[str(port["port"])] = {
                 "mode": mode,
                 "access-vlan": -1,
                 "trunk-vlans": [],
@@ -223,7 +223,7 @@ class OptiswitchDriver(NetworkDriver):
 
         # Add interfaces to results dict, populate vlans from vifs
         for interface in interface_info:
-            result[interface["vif"]] = {
+            result[str(interface["vif"])] = {
                 "mode": "access",
                 "access-vlan": -1,
                 "trunk-vlans": [],
