@@ -331,6 +331,29 @@ class OptiswitchDriver(NetworkDriver):
 
         return result
 
+    def get_mac_address_table(self):
+        show_lt = self._send_command("show lt")
+        macaddresses = textfsm_extractor(self, "show_lt", show_lt)
+
+        result = []
+        for mac in macaddresses:
+            static = False
+            if mac["mode"].lower() == "static":
+                static = True
+            result.append(
+                {
+                    "mac": str(mac["mac"]),
+                    "interface": str(mac["port"]),
+                    "vlan": int(mac["vid"]),
+                    "static": static,
+                    "active": True,
+                    "moves": 0,
+                    "last_move": float(0),
+                }
+            )
+
+        return result
+
     def _lldp_system_enabled_capabilities(self, capabilities):
         enabled_capabilities = []
         for cap in self._lldp_valid_system_capabilities():

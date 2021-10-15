@@ -1,0 +1,13 @@
+LT Learning is Enabled
+Learning Table contains  9  lt entries.
+INDEX   MAC ADDRESS        VID  PORT   MODE     LAST CHANGE
+-------------------------------------------------------------------
+1       10:0e:7e:4c:6f:80  489  6      DYNAMIC  10/15/2020 06:36:24
+2       60:9c:9f:d6:12:e8  489  6      DYNAMIC  04/29/2021 18:39:56
+3       a4:60:32:00:91:ca  489  Intern STATIC   02/16/2020 00:51:04
+4       a4:60:32:00:91:ca  662  Intern STATIC   02/16/2020 00:51:06
+5       00:24:38:51:c4:e1  1021 6      DYNAMIC  09/30/2021 21:37:13
+6       00:15:ad:34:df:71  3843 6      DYNAMIC  02/17/2020 12:14:29
+7       00:24:38:51:c4:e1  3843 6      DYNAMIC  10/15/2020 06:36:24
+8       64:00:f1:ed:43:d0  3843 3      DYNAMIC  02/17/2020 14:22:39
+9       a4:60:32:00:91:ca  4095 Intern STATIC   02/16/2020 00:50:25
