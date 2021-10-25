@@ -1,0 +1,1 @@
+../../../devices/OSV8_with_trunk/lldp_show_lldp_port_1_8.txt

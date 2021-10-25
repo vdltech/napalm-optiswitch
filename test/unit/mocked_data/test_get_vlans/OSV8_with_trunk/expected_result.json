@@ -1,0 +1,1 @@
+{"867": {"name": "N-VLAN", "interfaces": ["t1", "vif867"]}, "2812": {"name": "L3VPN", "interfaces": ["t1", "t2", "vif2812"]}, "3653": {"name": "TEST-LAG", "interfaces": ["t1", "vif3653"]}, "3656": {"name": "CUSTOMER-VLAN", "interfaces": ["t1", "t2", "vif3656"]}}

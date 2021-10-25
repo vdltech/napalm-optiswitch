@@ -1,0 +1,135 @@
+vif867 is UP (42w3d16h10m31s)
+  Name: N-VLAN
+  VRF NAME: default
+  Active: Yes
+  Ports: t1
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 867
+  ISP tag is not defined
+  ISP ports is not defined
+  MAC address is 44:37:08:00:05:4a
+  IP address is 10.64.35.53/24
+  CPU-membership is enable
+  SSH can be accessed from  10.0.0.0/8
+  Telnet can be accessed from 10.0.0.0/8
+  SNMP can be accessed from 10.0.0.0/8
+  TFTP can be accessed from  10.0.0.0/8
+  HTTP access is denied
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  IP forwarding is enabled
+  MTU Profile: 1
+  MTU:         1500
+  TE metric:            1
+  Default bandwidth:    1g
+  Maximum bandwidth:    1g
+  Reservable bandwidth: 1g
+  Free bandwidth:       0
+  Lt learning is enabled
+  Access-group is not defined
+
+vif2812 is UP (42w3d16h10m31s)
+  Name: L3VPN
+  VRF NAME: default
+  Active: Yes
+  Ports: t1,t2
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 2812
+  ISP tag is not defined
+  ISP ports is not defined
+  MAC address is 44:37:08:00:05:4a
+  IP address is not defined
+  CPU-membership is disable
+  Management access is denied
+  TFTP access is denied.
+  HTTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  TE metric:            1
+  Default bandwidth:    1g
+  Maximum bandwidth:    1g
+  Reservable bandwidth: 1g
+  Free bandwidth:       0
+  Lt learning is enabled
+  Access-group is not defined
+
+vif3653 is UP (39w0d7h40m11s)
+  Name: TEST-LAG
+  VRF NAME: default
+  Active: Yes
+  Ports: t1
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 3653
+  ISP tag is not defined
+  ISP ports is not defined
+  rfc2544 mac-to-responder 44:37:08:01:05:4a
+  MAC address is 44:37:08:00:05:4a
+  IP address is not defined
+  CPU-membership is disable
+  Management access is denied
+  TFTP access is denied.
+  HTTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  TE metric:            1
+  Default bandwidth:    1g
+  Maximum bandwidth:    1g
+  Reservable bandwidth: 1g
+  Free bandwidth:       0
+  Lt learning is enabled
+  Access-group is not defined
+
+vif3656 is UP (42w3d16h10m31s)
+  Name: CUSTOMER-VLAN
+  VRF NAME: default
+  Active: Yes
+  Ports: t1,t2
+  Interface type is Vlan
+  Encapsulation: 802.1Q,  Tag 3656
+  ISP tag is not defined
+  ISP ports is not defined
+  MAC address is 44:37:08:00:05:4a
+  IP address is not defined
+  CPU-membership is disable
+  Management access is denied
+  TFTP access is denied.
+  HTTP access is denied.
+  Management access IPv6 is denied
+  IPv6 RADVD parameters:
+   no ipv6 router-advertisement enable
+   ipv6 router-advertisement max-interval 600 (sec)
+   ipv6 router-advertisement reachable-time 0 (millisec)
+   ipv6 router-advertisement router-preference medium
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+  MTU Profile: 1
+  MTU:         1500
+  TE metric:            1
+  Default bandwidth:    1g
+  Maximum bandwidth:    1g
+  Reservable bandwidth: 1g
+  Free bandwidth:       0
+  Lt learning is enabled
+  Access-group is not defined

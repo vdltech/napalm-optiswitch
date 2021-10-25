@@ -65,7 +65,7 @@ class OptiswitchDriver(NetworkDriver):
                 if m:
                     ports += range(int(m.group(1)), int(m.group(2)) + 1)
                 else:
-                    ports.append(int(section))
+                    ports.append(section)
         # Should be strings, not ints
         return [str(p) for p in ports]
 

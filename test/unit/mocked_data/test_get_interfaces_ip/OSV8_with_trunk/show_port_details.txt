@@ -1,0 +1,1 @@
+../../../devices/OSV8_with_trunk/show_port_details.txt

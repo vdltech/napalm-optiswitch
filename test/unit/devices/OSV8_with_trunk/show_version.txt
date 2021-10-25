@@ -1,0 +1,61 @@
+ADVA FSP150-XG304 OptiSwitch V8
+====================================
+Hardware
+--------
+Board serial number   : 1710102070
+Unit serial number    : 1716100771
+
+CPU: PJ4B, 800Mhz and 1GB Dram memory
+PP: C-chip (Cetus)
+NOR Flash
+Device Hardware version: B02
+
+Temperature:
+Device: 50C / 122F (normal)
+PP    : 56C / 132F
+
+Fpga:
+Management CPLD-2000 version: 0xA
+Management CPLD-256  version: 0x8
+
+Power Supplies:
+unit 1 AC: INSTALLED & ACTIVE
+unit 2 External DC: NOT ACTIVE
+
+Fans:
+  Fan 1: ACTIVE
+  Type : Fixed Speed
+
+Valid ports: 1-8
+10Giga ports:  Active
+
+Software
+--------
+MasterOS version: 19_2_1 (15071)
+Build time: 29-07-2019 build-15070-1-g08abec8
+Based on:
+Linux HOSTNAME 3.10.70 #2 SMP PREEMPT Mon Jul 29 15:14:36 IDT 2019 armv7l
+Driver v1.9.7, cpssDxCh CPSS 4.1.2016.6
+
+Base MAC address: 44:37:08:00:05:4a
+
+Supported features:
+-------------------
+MSTP -     Yes
+G.8031 -   Yes
+G.8032 -   Yes
+sFlow  -   Yes
+RIP  -     No
+OSPF -     No
+ISIS -     No
+BGP  -     No
+RSVP -     No
+LDP  -     No
+MC LAG -   Not Activated
+IPv6 -     Yes; Currently - disabled
+MPLS -     Not Active
+Routing -  Not Active
+
+up 297 days 18:45
+users: remote - 2, console is closed
+Last boot cause: console command 2020/12/31 14:17:07 upgrade scp 193.203.88.25 /home/tftpboot/mrv/os-v/19.2.1/ OS-V-19_2_1.15071.ver scp

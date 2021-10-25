@@ -1,0 +1,24 @@
+Port 1
+=========
+No lldp info received
+ Port 2
+=========
+No lldp info received
+ Port 3
+=========
+No lldp info received
+ Port 4
+=========
+No lldp info received
+ Port 5
+=========
+No lldp info received
+ Port 6
+=========
+No lldp info received
+ Port 7
+=========
+No lldp info received
+ Port 8
+=========
+No lldp info received

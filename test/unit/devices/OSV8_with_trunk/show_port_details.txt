@@ -1,0 +1,197 @@
+Port 1 details:
+-------------------
+Description         : TO-CUSTOMER-L3VPN
+Type                : ETH10/100/1000
+Link                : OFF   (42w3d18h44m39s)
+Duplex state        : N/A
+PHY                 : TP
+Speed selected      : AUTO
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : untagged
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+Flood limiting      : rate 10m
+Flood limiting      : unknown-unicast
+Flood limiting      : multicast
+Flood limiting      : broadcast
+
+Port 2 details:
+-------------------
+Description         : TO-CUSTOMER-FOR-TESTING
+Type                : ETH10/100/1000
+Link                : OFF   (42w3d18h44m39s)
+Duplex state        : N/A
+PHY                 : TP
+Speed selected      : AUTO
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : untagged
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+
+Port 3 details:
+-------------------
+Description         : Port 3 - ETH10/100/1000
+Type                : ETH10/100/1000
+Media-select mode   : AUTO
+Link                : OFF (42w3d18h44m39s)
+Duplex state        : N/A
+PHY                 : COMBO+100FX
+Speed selected      : AUTO
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : untagged
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+
+Port 4 details:
+-------------------
+Description         : Port 4 - ETH10/100/1000
+Type                : ETH10/100/1000
+Media-select mode   : AUTO
+Link                : OFF (42w3d18h44m39s)
+Duplex state        : N/A
+PHY                 : COMBO+100FX
+Speed selected      : AUTO
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : untagged
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+
+Trunk t1 details:
+-------------------
+Description         : TO:LAG-20G
+Link                : ON
+Duplex state        : FULL
+Speed selected      : FORC10,000
+Actual speed        : 20 Gbps
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+Tags List           : 867,2812,3653,3656
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+
+Trunk t1, Port 6 details:
+-------------------
+Description         : TO:POP-ROUTER::1/21
+Type                : ETH1000/10000
+Link                : ON    (42w3d18h44m19s)
+Duplex state        : FULL
+PHY                 : SFP+
+XFP mode            : LAN
+Speed selected      : FORC10,000
+Actual speed        : 10 Gbps
+Auto-Neg Advertise  : Default
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+
+Trunk t1, Port 8 details:
+-------------------
+Description         : POP-ROUTER2_E1_17
+Type                : ETH1000/10000
+Link                : ON    (18w6d0h57m28s)
+Duplex state        : FULL
+PHY                 : SFP+
+XFP mode            : LAN
+Speed selected      : FORC10,000
+Actual speed        : 10 Gbps
+Auto-Neg Advertise  : Default
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+
+Trunk t2 details:
+-------------------
+Description         : TO:LAG-20G-HANDOFF
+Link                : ON
+Duplex state        : FULL
+Speed selected      : FORC10,000
+Actual speed        : 20 Gbps
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+Tags List           : 2812,3656
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+
+Trunk t2, Port 5 details:
+-------------------
+Description         : TO:CUSTOMER-10G-LAG-2
+Type                : ETH1000/10000
+Link                : ON    (33w1d19h2m44s)
+Duplex state        : FULL
+PHY                 : SFP+
+XFP mode            : LAN
+Speed selected      : FORC10,000
+Actual speed        : 10 Gbps
+Auto-Neg Advertise  : Default
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+
+Trunk t2, Port 7 details:
+-------------------
+Description         : TO:CUSTOMER-10G-LAG-1
+Type                : ETH1000/10000
+Link                : ON    (33w1d19h5m18s)
+Duplex state        : FULL
+PHY                 : SFP+
+XFP mode            : LAN
+Speed selected      : FORC10,000
+Actual speed        : 10 Gbps
+Auto-Neg Advertise  : Default
+Bypass mode         : ENABLE
+State               : ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+OutBound Tagged     : tagged
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
