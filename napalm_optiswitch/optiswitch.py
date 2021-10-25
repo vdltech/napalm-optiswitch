@@ -98,20 +98,20 @@ class OptiswitchDriver(NetworkDriver):
         show_interface_detail = self._send_command("show interface detail")
         interfaces = textfsm_extractor(self, "show_interface_detail", show_interface_detail)
         result = {}
-        result.update(
-            {
-                i["port"]: {
-                    "is_up": i["linkstate"] == "ON",
-                    "is_enabled": i["adminstate"] == "ENABLE",
-                    "description": i["description"],
-                    "speed": self._convert_speed(i["actualspeed"]),
-                    "mtu": -1,
-                    "last_flapped": -1.0,
-                    "mac_address": version["basemac"],
-                }
-                for i in ports
+        for port in ports:
+            result[port["port"]] = {
+                "is_up": port["linkstate"] == "ON",
+                "is_enabled": port["adminstate"] == "ENABLE",
+                "description": port["description"],
+                "speed": self._convert_speed(port["actualspeed"]),
+                "mtu": -1,
+                "last_flapped": -1.0,
+                "mac_address": version["basemac"],
             }
-        )
+            if port["parent"]:
+                if "children" not in result[port["parent"]].keys():
+                    result[port["parent"]]["children"] = []
+                result[port["parent"]]["children"].append(port["port"])
         result.update(
             {
                 i["vif"]: {

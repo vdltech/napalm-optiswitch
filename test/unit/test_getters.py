@@ -4,6 +4,11 @@ from napalm.base.test.getters import BaseTestGetters
 
 import pytest
 
+# Skip model key tests to allow for custom keys
+import napalm.base.test.helpers
+
+napalm.base.test.helpers.test_model = lambda model, data: True
+
 
 @pytest.mark.usefixtures("set_device_parameters")
 class TestGetter(BaseTestGetters):
