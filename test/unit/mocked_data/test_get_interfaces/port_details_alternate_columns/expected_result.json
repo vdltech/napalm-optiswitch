@@ -1,0 +1,11 @@
+{
+  "1": {
+    "is_up": true,
+    "is_enabled": true,
+    "description": "CU::1G:COPPER",
+    "speed": 1000,
+    "mtu": -1,
+    "last_flapped": -1.0,
+    "mac_address": "00:d0:8b:00:39:71"
+  }
+}

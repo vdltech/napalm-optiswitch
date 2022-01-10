@@ -8,8 +8,8 @@ Value Parent (\S+)
 
 Start
   ^(?:Trunk ${Parent}, )?(Port|Trunk) ${Port} details:
-  ^Description\s+: ${Description}
-  ^Link\s+: ${LinkState}
+  ^Description\s+:(\s+)?${Description}
+  ^Link\s+:(\s+)?${LinkState}
   ^Actual speed\s+:\s+${ActualSpeed}
-  ^State\s+: ${AdminState}
-  ^OutBound Tagged\s+: ${OutBoundTagged} -> Record
+  ^State\s+:(\s+)?${AdminState}
+  ^OutBound Tagged\s+:(\s+)?${OutBoundTagged} -> Record

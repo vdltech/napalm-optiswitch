@@ -1,0 +1,25 @@
+Port 1 details:
+-------------------
+Description         : CU::1G:COPPER
+Type                : ETH10/100/1000
+Link                : ON    (2w1d6h6m18s)
+Duplex state        : FULL
+PHY                 : TP
+Speed selected      : AUTO
+Actual speed        :  1 Gbps
+Auto-Neg Advertise  : Default
+Selected cross mode : AUTO
+Actual cross mode   : MDI-X
+State               :ENABLE
+Priority            : 1
+Flow control mode   : off
+Ethertype           : CORE1:0x8100
+ctag (inner) aware  : FALSE
+OutBound Tagged     : untagged
+Tags List           : 3301
+DEI Remarking       : DISABLE
+UDLD Protocol       : -
+Flood limiting      : rate 10m
+Flood limiting      : unknown-unicast
+Flood limiting      : multicast
+Flood limiting      : broadcast
