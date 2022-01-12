@@ -40,6 +40,19 @@ class OptiswitchDriver(NetworkDriver):
         if optional_args is None:
             optional_args = {}
 
+    def _cli(self, commands):
+        """takes a list of commands and returns in dictionary"""
+        cli_output = dict()
+        if type(commands) is not list:
+            raise TypeError("Please enter a valid list of commands!")
+
+        for command in commands:
+            output = self._send_command(command)
+            cli_output.setdefault(command, {})
+            cli_output[command] = output
+
+        return cli_output
+
     def _send_command(self, command):
         """Wrapper for self.device.send.command().
         If command is a list will iterate through commands until valid command.
@@ -329,6 +342,46 @@ class OptiswitchDriver(NetworkDriver):
             }
         )
 
+        return result
+
+    def get_optics(self):
+        optic_result = self._send_command("show port sfp-diag")
+        optics = textfsm_extractor(self, 'show_optics', optic_result)
+
+        result = {}
+
+        for port in optics:
+            result.update({
+                f'port{port["port"]}': {
+                    'physical_channels': {
+                        'channel': [
+                            {
+                                'index': 0,
+                                'state': {
+                                    'input_power': {
+                                        'instant': port['txpower'],
+                                        'avg': None,
+                                        'min': None,
+                                        'max': None,
+                                    },
+                                    'output_power': {
+                                        'instant': port['rxpower'],
+                                        'avg': None,
+                                        'min': None,
+                                        'max': None,
+                                    },
+                                    'laser_bias_current': {
+                                        'instant': port['laserbias'],
+                                        'avg': None,
+                                        'min': None,
+                                        'max': None,
+                                    },
+                                }
+                            }
+                        ]
+                    }
+                }
+            })
         return result
 
     def get_mac_address_table(self):

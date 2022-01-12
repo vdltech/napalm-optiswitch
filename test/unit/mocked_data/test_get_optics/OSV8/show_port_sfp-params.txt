@@ -1,0 +1,49 @@
+ SFP ports internal EEPROM data
+================================
+ Port  1: Failed to get EEPROM Data, This is not an SFP type port or the SFP is not connected.
+ Port  2: Failed to get EEPROM Data, This is not an SFP type port or the SFP is not connected.
+ Port  3: Failed to get EEPROM Data, SFP is not inserted
+ Port  4: Failed to get EEPROM Data, SFP is not inserted
+
+   Port 5: SFP EEPROM Parameters
+ **************************************************************************
+  Identifier is SFP
+  Connector code is LC
+  Transceiver subcode is Unspecified
+  Serial encoding mechanism is SONET Scrambeld
+  The nominal bit rate is 10300 Megabits/sec.
+  Link length using single mode (9 micron) is not supported.
+  Link length using 50 micron multi-mode fiber is greater than 300 m.
+  Link length using 62.5 micron multi-mode fiber is greater than 150 m.
+  Vendor name is FiberStore
+  Vendor PN is SFP-10GSR-85
+  Vendor revision is 0
+  Vendor SN is H0609180138
+  Nominal transmitter output wavelength at room temperature is 850.00 nm.
+  Vendor Specific is (ASCII): "                                "
+                     (HEX)  : 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20
+                              20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20
+ **************************************************************************
+
+ Port  6: Failed to get EEPROM Data, SFP is not inserted
+ Port  7: Failed to get EEPROM Data, SFP is not inserted
+
+   Port 8: SFP EEPROM Parameters
+ **************************************************************************
+  Identifier is SFP
+  Connector code is LC
+  Transceiver subcode is Unspecified
+  Serial encoding mechanism is SONET Scrambeld
+  The nominal bit rate is 10300 Megabits/sec.
+  Link length using single mode (9 micron) is greater than 10000 m.
+  Link length using 50 micron multi-mode fiber is not supported.
+  Link length using 62.5 micron multi-mode fiber is not supported.
+  Vendor name is FS
+  Vendor PN is SFP-10GLR-31
+  Vendor revision is A
+  Vendor SN is S1811031603
+  Nominal transmitter output wavelength at room temperature is 1310.00 nm.
+  Vendor Specific is (ASCII): ""
+                     (HEX)  : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+                              00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+ **************************************************************************
