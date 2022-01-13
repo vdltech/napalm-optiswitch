@@ -1,0 +1,27 @@
+ SFP ports internal EEPROM data
+================================
+
+   Port  1: SFP Digital Diagnostics
+ ****************************************************
+  Description           Real-Time Value
+  --------------------  ---------------
+  Temperature (C)/(F):    36/96
+  Voltage         (V):     3.2214
+  TX Bias        (mA):    11.950
+  Tx Power (dBm)/(mW):   -6.3/0.235
+  Rx Power (dBm)/(mW):   -5.7/0.270
+ ****************************************************
+
+ Port  2: Failed to get EEPROM Data, SFP is not inserted
+ Port  3: Failed to get EEPROM Data, SFP is not inserted
+
+   Port  4: SFP Digital Diagnostics
+ ****************************************************
+  Description           Real-Time Value
+  --------------------  ---------------
+  Temperature (C)/(F):    39/102
+  Voltage         (V):     3.2036
+  TX Bias        (mA):    11.925
+  Tx Power (dBm)/(mW):   -6.2/0.241
+  Rx Power (dBm)/(mW):   -6.2/0.238
+ ****************************************************
