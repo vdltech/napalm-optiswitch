@@ -360,21 +360,21 @@ class OptiswitchDriver(NetworkDriver):
                                     "state": {
                                         "input_power": {
                                             "instant": float(port["rxpower"]),
-                                            "avg": None,
-                                            "min": None,
-                                            "max": None,
+                                            "avg": float(port["rxpower"]),
+                                            "min": float(port["rxpower"]),
+                                            "max": float(port["rxpower"]),
                                         },
                                         "output_power": {
                                             "instant": float(port["txpower"]),
-                                            "avg": None,
-                                            "min": None,
-                                            "max": None,
+                                            "avg": float(port["txpower"]),
+                                            "min": float(port["txpower"]),
+                                            "max": float(port["txpower"]),
                                         },
                                         "laser_bias_current": {
                                             "instant": float(port["laserbias"]),
-                                            "avg": None,
-                                            "min": None,
-                                            "max": None,
+                                            "avg": float(port["laserbias"]),
+                                            "min": float(port["laserbias"]),
+                                            "max": float(port["laserbias"]),
                                         },
                                     },
                                 }
@@ -384,6 +384,9 @@ class OptiswitchDriver(NetworkDriver):
                 }
             )
         return result
+
+    # def get_optics_detail(self):
+    #     optic_result = self._cli(["show port sfp-diag","show port sfp-param"])
 
     def get_mac_address_table(self):
         show_lt = self._send_command("show lt")

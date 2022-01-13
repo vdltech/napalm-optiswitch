@@ -1,1 +1,1 @@
-{"port6":{"physical_channels":{"channel":[{"index":0,"state":{"input_power":{"instant":-4.8,"avg":null,"min":null,"max":null},"output_power":{"instant":-6.1,"avg":null,"min":null,"max":null},"laser_bias_current":{"instant":9.650,"avg":null,"min":null,"max":null}}}]}}}
+{"port6":{"physical_channels":{"channel":[{"index":0,"state":{"input_power":{"instant":-4.8,"avg":-4.8,"min":-4.8,"max":-4.8},"output_power":{"instant":-6.1,"avg":-6.1,"min":-6.1,"max":-6.1},"laser_bias_current":{"instant":9.650,"avg":9.650,"min":9.650,"max":9.650}}}]}}}
