@@ -346,7 +346,7 @@ class OptiswitchDriver(NetworkDriver):
 
     def get_optics(self):
         optic_result = self._send_command("show port sfp-diag")
-        optics = textfsm_extractor(self, "show_optics", optic_result)
+        optics = textfsm_extractor(self, "show_port_sfp_diag", optic_result)
         result = {}
 
         for port in optics:
@@ -385,8 +385,72 @@ class OptiswitchDriver(NetworkDriver):
             )
         return result
 
-    # def get_optics_detail(self):
-    #     optic_result = self._cli(["show port sfp-diag","show port sfp-param"])
+    def get_optics_detail(self):
+        """includes vendor name and optic type"""
+        # optic_result = self._cli(["show port sfp-diag", "show port sfp-param"])
+        # sfp_diag = textfsm_extractor(
+        #     self, "show_port_sfp_diag", optic_result["show port sfp-diag"]
+        # )
+        # sfp_param = textfsm_extractor(
+        #     self, "show_port_sfp_params", optic_result["show port sfp-param"]
+        # )
+        sfp_diag = textfsm_extractor(
+            self,"show_port_sfp_diag", self._send_command("show port sfp-diag")
+        )
+        sfp_param = textfsm_extractor(
+            self,"show_port_sfp_params", self._send_command("show port sfp-param")
+        )
+        optics = {}
+        for optic in sfp_diag:
+            optics[optic["port"]] = {}
+            optics[optic["port"]]["rxpower"] = optic["rxpower"]
+            optics[optic["port"]]["txpower"] = optic["txpower"]
+            optics[optic["port"]]["laserbias"] = optic["laserbias"]
+
+        for optic in sfp_param:
+            optics[optic["port"]]["vendor"] = optic["vendor"]
+            optics[optic["port"]]["model"] = optic["model"]
+
+        result = {}
+
+        for optic in optics:
+            result.update(
+                {
+                    f"port{optic}": {
+                        "physical_channels": {
+                            "channel": [
+                                {
+                                    "vendor": optics[optic]["vendor"],
+                                    "model": optics[optic]["model"],
+                                    "index": 0,
+                                    "state": {
+                                        "input_power": {
+                                            "instant": float(optics[optic]["rxpower"]),
+                                            "avg": float(optics[optic]["rxpower"]),
+                                            "min": float(optics[optic]["rxpower"]),
+                                            "max": float(optics[optic]["rxpower"]),
+                                        },
+                                        "output_power": {
+                                            "instant": float(optics[optic]["txpower"]),
+                                            "avg": float(optics[optic]["txpower"]),
+                                            "min": float(optics[optic]["txpower"]),
+                                            "max": float(optics[optic]["txpower"]),
+                                        },
+                                        "laser_bias_current": {
+                                            "instant": float(optics[optic]["laserbias"]),
+                                            "avg": float(optics[optic]["laserbias"]),
+                                            "min": float(optics[optic]["laserbias"]),
+                                            "max": float(optics[optic]["laserbias"]),
+                                        },
+                                    },
+                                }
+                            ]
+                        }
+                    }
+                }
+            )
+
+        return result
 
     def get_mac_address_table(self):
         show_lt = self._send_command("show lt")

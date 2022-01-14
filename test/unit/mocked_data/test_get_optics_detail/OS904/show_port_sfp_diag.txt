@@ -1,0 +1,16 @@
+ SFP ports internal EEPROM data
+================================
+ Port  1: Failed to get EEPROM Data, SFP is not inserted
+ Port  2: Failed to get EEPROM Data, SFP is not inserted
+ Port  3: Digital Diagnostic feature is not supported for current SFP
+
+   Port  4: SFP Digital Diagnostics
+ ****************************************************
+  Description           Real-Time Value
+  --------------------  ---------------
+  Temperature (C)/(F):    62/143
+  Voltage         (V):     3.2522
+  TX Bias        (mA):    13.200
+  Tx Power (dBm)/(mW):   -6.0/0.249
+  Rx Power (dBm)/(mW):   -4.4/0.362
+ ****************************************************

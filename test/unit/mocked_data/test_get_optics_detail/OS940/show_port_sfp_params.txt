@@ -1,0 +1,53 @@
+ SFP ports internal EEPROM data
+================================
+ Port  1: Failed to get EEPROM Data, SFP is not inserted
+ Port  2: Failed to get EEPROM Data, SFP is not inserted
+ Port  3: Failed to get EEPROM Data, SFP is not inserted
+ Port  4: Failed to get EEPROM Data, SFP is not inserted
+ Port  5: Failed to get EEPROM Data, SFP is not inserted
+ Port  6: Failed to get EEPROM Data, SFP is not inserted
+ Port  7: Failed to get EEPROM Data, SFP is not inserted
+ Port  8: Failed to get EEPROM Data, SFP is not inserted
+ Port  9: Failed to get EEPROM Data, SFP is not inserted
+ Port 10: Failed to get EEPROM Data, SFP is not inserted
+ Port 11: Failed to get EEPROM Data, SFP is not inserted
+ Port 12: Failed to get EEPROM Data, SFP is not inserted
+
+   Port 13: SFP EEPROM Parameters
+ **************************************************************************
+  Identifier is XFP
+  Connector code is LC
+  Transceiver subcode is 10GBASE-LR/LW
+  Serial encoding mechanism is Unspecified
+  The nominal bit rate is 9.9 to 11.1 Gigabits/sec.
+  Link length using single mode (9 micron) is 10 km.
+  Vendor name is Fiberstore
+  Vendor PN is XFP-10GLR-31
+  Vendor revision is A0
+  Vendor SN is H0609180196
+  Nominal transmitter output wavelength at room temperature is 1310.70 nm.
+  Vendor Specific is:
+                     (HEX)  : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+                              00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+ **************************************************************************
+
+ Port 14: Failed to get EEPROM Data, SFP is not inserted
+ Port 15: Failed to get EEPROM Data, SFP is not inserted
+
+   Port 16: SFP EEPROM Parameters
+ **************************************************************************
+  Identifier is XFP
+  Connector code is LC
+  Transceiver subcode is 10GBASE-LR/LW
+  Serial encoding mechanism is Unspecified
+  The nominal bit rate is 9.9 to 11.1 Gigabits/sec.
+  Link length using single mode (9 micron) is 10 km.
+  Vendor name is Fiberstore
+  Vendor PN is XFP-10G-BX
+  Vendor revision is A0
+  Vendor SN is H0790500030
+  Nominal transmitter output wavelength at room temperature is 1270.70 nm.
+  Vendor Specific is:
+                     (HEX)  : 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+                              00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+ **************************************************************************

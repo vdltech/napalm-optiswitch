@@ -1,0 +1,47 @@
+ SFP ports internal EEPROM data
+================================
+ Port  1: Failed to get EEPROM Data, SFP is not inserted
+ Port  2: Failed to get EEPROM Data, SFP is not inserted
+ Port  3: Failed to get EEPROM Data, SFP is not inserted
+ Port  4: Failed to get EEPROM Data, SFP is not inserted
+
+   Port 5: SFP EEPROM Parameters
+ **************************************************************************
+  Identifier is SFP
+  Connector code is LC
+  Transceiver subcode is Base-BX10
+  Serial encoding mechanism is 8B10B
+  The nominal bit rate is 1300 Megabits/sec.
+  Link length using single mode (9 micron) is greater than 10000 m.
+  Link length using 50 micron multi-mode fiber is not supported.
+  Link length using 62.5 micron multi-mode fiber is not supported.
+  Vendor name is SOURCEPHOTONICS
+  Vendor PN is SPL34GBBXCDFM
+  Vendor revision is 10
+  Vendor SN is DCD2013670
+  Nominal transmitter output wavelength at room temperature is 1310.00 nm.
+  Vendor Specific is (ASCII): "                               "
+                     (HEX)  : 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20
+                              20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 00
+ **************************************************************************
+
+
+   Port 6: SFP EEPROM Parameters
+ **************************************************************************
+  Identifier is SFP
+  Connector code is LC
+  Transceiver subcode is 1000Base-LX
+  Serial encoding mechanism is 8B10B
+  The nominal bit rate is 1300 Megabits/sec.
+  Link length using single mode (9 micron) is greater than 10000 m.
+  Link length using 50 micron multi-mode fiber is not supported.
+  Link length using 62.5 micron multi-mode fiber is not supported.
+  Vendor name is FiberStore
+  Vendor PN is SFP1G-LX-31
+  Vendor revision is 0
+  Vendor SN is F1712045696
+  Nominal transmitter output wavelength at room temperature is 1310.00 nm.
+  Vendor Specific is (ASCII): "                               "
+                     (HEX)  : 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 20
+                              20 20 20 20 20 20 20 20 20 20 20 20 20 20 20 00
+ **************************************************************************
