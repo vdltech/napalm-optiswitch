@@ -1,0 +1,583 @@
+
+vif427 is UP (118w1d22h15m32s)
+
+
+  Name: CUST
+
+
+  Active: Yes
+
+
+  Ports: 2,16
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 427
+
+
+  rfc2544 mac-to-responder a4:60:32:01:5d:26
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is 10.32.14.37/24
+
+
+  CPU-membership is enable
+
+
+  SSH can be accessed from  10.0.0.0/8
+
+  Telnet can be accessed from 10.0.0.0/8
+
+  SNMP can be accessed from 10.0.0.0/8
+
+  TFTP can be accessed from  10.0.0.0/8
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  IP forwarding is enabled
+
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+
+
+
+
+vif666 is UP (4w4d12h34m51s)
+
+
+  Name: OAM-TESTING
+
+
+  Active: Yes
+
+
+  Ports: 16
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 666
+
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is not defined
+
+
+  CPU-membership is disable
+
+
+  Management access is denied
+
+
+  TFTP access is denied.
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+
+
+
+
+vif1044 is UP (No state changes have occurred)
+
+
+  Description: NEXUS
+
+
+  Active: Yes
+
+
+  Ports: 7,9,16
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 1044
+
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is 172.16.255.1/30
+
+
+  CPU-membership is enable
+
+
+  Management access is denied
+
+
+  TFTP access is denied.
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  IP forwarding is enabled
+
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+
+
+
+
+vif1045 is UP (No state changes have occurred)
+
+
+  Description: P2P
+
+
+  Active: Yes
+
+
+  Ports: 8,16
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 1045
+
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is 172.16.255.6/30
+
+
+  CPU-membership is enable
+
+
+  Management access is denied
+
+
+  TFTP access is denied.
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  IP forwarding is enabled
+
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+
+
+
+
+vif1208 is UP (4w4d12h34m51s)
+
+
+  Name: DLL-P2P
+
+
+  Active: Yes
+
+
+  Ports: 1,16
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 1208
+
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is not defined
+
+
+  CPU-membership is disable
+
+
+  Management access is denied
+
+
+  TFTP access is denied.
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+
+
+
+
+vif1365 is UP (118w1d22h15m32s)
+
+
+  Name: DLL-NET
+
+
+  Active: Yes
+
+
+  Ports: 13,16
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 1450
+
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is not defined
+
+
+  CPU-membership is disable
+
+
+  Management access is denied
+
+
+  TFTP access is denied.
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+
+
+
+
+vif1732 is UP (4w4d12h34m51s)
+
+
+  Description: B-DLL-TEST-00197830
+
+
+  Active: Yes
+
+
+  Ports: 3,16
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 1732
+
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is not defined
+
+
+  CPU-membership is disable
+
+
+  Management access is denied
+
+
+  TFTP access is denied.
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+
+
+
+
+vif2929 is UP (4w4d12h34m51s)
+
+
+  Name: DLL-VL
+
+
+  Active: Yes
+
+
+  Ports: 5,16
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 2929
+
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is not defined
+
+
+  CPU-membership is disable
+
+
+  Management access is denied
+
+
+  TFTP access is denied.
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+
+
+
+
+vif4095 is UP (No state changes have occurred)
+
+
+  Name: agFPGA
+
+
+  Description: Internal interface for ETH OAM FPGA port, NOT for USER.
+
+
+  Active: Yes
+
+
+  Ports:
+
+
+  Interface type is Vlan
+
+
+  Encapsulation: 802.1Q,  Tag 4095
+
+
+  MAC address is a4:60:32:00:5d:26
+
+
+  IP address is not defined
+
+
+  CPU-membership is enable
+
+
+  Management access is denied
+
+
+  TFTP access is denied.
+
+  Management access IPv6 is denied
+
+
+  IPv6 RADVD parameters:
+
+   no ipv6 router-advertisement enable
+
+   ipv6 router-advertisement max-interval 600 (sec)
+
+   ipv6 router-advertisement reachable-time 0 (millisec)
+
+   ipv6 router-advertisement router-preference medium
+
+   ipv6 router-advertisement valid-lifetime 86400 (sec)
+
+   ipv6 router-advertisement preferred-lifetime 14400 (sec)
+
+  MTU Profile: 1
+
+
+  MTU:         1500
+
+
+  Lt learning is enabled
+
+
+  Access-group is not defined
+

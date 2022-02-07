@@ -1,6 +1,7 @@
 Value Vif (vif\d+|eth\d+)
 Value Name (\S+)
 Value Ports (\S+)
+Value Tag (\d+)
 Value MacAddress (\S+)
 Value IpAddress (.*)
 Value LinkState (UP|DOWN)
@@ -14,6 +15,7 @@ Start
   ^\s+Description: ${Description}
   ^\s+Active: ${Active}
   ^\s+Ports: ${Ports}
+  ^\s+Encapsulation: .*,\s+Tag ${Tag}
   ^\s+MAC address is ${MacAddress}
   ^\s+IP address is ${IpAddress}
   ^\s+MTU:\s+${MTU} -> Record
