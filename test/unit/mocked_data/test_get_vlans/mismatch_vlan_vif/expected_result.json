@@ -1,0 +1,66 @@
+{
+  "427": {
+    "interfaces": [
+      "2",
+      "16",
+      "vif427"
+    ],
+    "name": "CUST"
+  },
+  "666": {
+    "interfaces": [
+      "16",
+      "vif666"
+    ],
+    "name": "OAM-TESTING"
+  },
+  "1044": {
+    "interfaces": [
+      "7",
+      "9",
+      "16",
+      "vif1044"
+    ],
+    "name": "NEXUS"
+  },
+  "1045": {
+    "interfaces": [
+      "8",
+      "16",
+      "vif1045"
+    ],
+    "name": "P2P"
+  },
+  "1208": {
+    "interfaces": [
+      "1",
+      "16",
+      "vif1208"
+    ],
+    "name": "DLL-P2P"
+  },
+  "1450": {
+    "interfaces": [
+      "13",
+      "16",
+      "vif1365"
+    ],
+    "name": "DLL-NET"
+  },
+  "1732": {
+    "interfaces": [
+      "3",
+      "16",
+      "vif1732"
+    ],
+    "name": "B-DLL-TEST-00197830"
+  },
+  "2929": {
+    "interfaces": [
+      "5",
+      "16",
+      "vif2929"
+    ],
+    "name": "DLL-VL"
+  }
+}

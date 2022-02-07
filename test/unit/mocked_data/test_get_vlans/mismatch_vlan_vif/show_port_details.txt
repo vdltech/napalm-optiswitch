@@ -1,0 +1,911 @@
+
+Port 1 details:
+
+
+-------------------
+
+
+Description         : TEMP-1G-P2P-HANDOFF
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : COPPER
+
+Link                : OFF (118w1d22h16m19s)
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Bypass mode         : ENABLE
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+Tags List           : 1208
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+Flood limiting      : rate 10m
+
+Flood limiting      : unknown-unicast
+
+Flood limiting      : multicast
+
+Flood limiting      : broadcast
+
+
+Port 2 details:
+
+
+-------------------
+
+
+Description         : CONTROL
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : COPPER
+
+Link                : ON Copper (40w2d15h50m44s)
+
+Duplex state        : FULL
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Actual speed        :  1 Gbps
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Actual cross mode   : MDI-X
+
+
+Bypass mode         : ENABLE
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+Tags List           : 427
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 3 details:
+
+
+-------------------
+
+
+Description         : TEST-IPSEC
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : OFF (12w6d3h11m22s)
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Bypass mode         : ENABLE
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+Tags List           : 1732
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 4 details:
+
+
+-------------------
+
+
+Description         : Port 4 - ETH10/100/1000
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : OFF (118w1d22h16m20s)
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Bypass mode         : ENABLE
+
+
+State               : DISABLE (Manual)
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 5 details:
+
+
+-------------------
+
+
+Description         : Port 5 - ETH10/100/1000
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : OFF (10w4d22h42m23s)
+
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Bypass mode         : ENABLE
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+Tags List           : 2929
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 6 details:
+
+
+-------------------
+
+
+Description         : Port 6 - ETH10/100/1000
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : OFF (118w1d22h16m20s)
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Bypass mode         : ENABLE
+
+
+State               : DISABLE (Manual)
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 7 details:
+
+
+-------------------
+
+
+Description         : NEXUS-2
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : ON Copper (3w5d21h36m44s)
+
+Duplex state        : FULL
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Actual speed        :  1 Gbps
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Actual cross mode   : MDI-X
+
+
+Bypass mode         : ENABLE
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+Tags List           : 1044
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 8 details:
+
+
+-------------------
+
+
+Description         : DLL-P2P
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : ON Copper (20w0d2h37m45s)
+
+Duplex state        : FULL
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Actual speed        :  1 Gbps
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Actual cross mode   : MDI-X
+
+
+Bypass mode         : ENABLE
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+Tags List           : 1045
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 9 details:
+
+
+-------------------
+
+
+Description         : ADDITIONAL--NEXUS
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : OFF (14w6d3h18m22s)
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Bypass mode         : ENABLE
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+Tags List           : 1044
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 10 details:
+
+
+-------------------
+
+
+Description         : Port 10 - ETH10/100/1000
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : OFF (118w1d22h16m20s)
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Actual cross mode   : MDI-X
+
+
+Bypass mode         : ENABLE
+
+
+State               : DISABLE (Manual)
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 11 details:
+
+
+-------------------
+
+
+Description         : Port 11 - ETH10/100/1000
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : OFF (118w1d22h16m20s)
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Bypass mode         : ENABLE
+
+
+State               : DISABLE (Manual)
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 12 details:
+
+
+-------------------
+
+
+Description         : Port 12 - ETH10/100/1000
+
+
+Type                : ETH10/100/1000
+
+
+Media-select mode   : AUTO
+
+Link                : OFF (118w1d22h16m20s)
+
+Duplex state        : N/A
+
+
+PHY                 : COMBO+100FX
+
+
+Speed selected      : AUTO
+
+
+Auto-Neg Advertise  : Default
+
+
+Selected cross mode : AUTO
+
+
+Bypass mode         : ENABLE
+
+
+State               : DISABLE (Manual)
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 13 details:
+
+
+-------------------
+
+
+Description         : FIREWALL
+
+
+Type                : ETH10000
+
+
+Link                : ON    (40w2d15h50m42s)
+
+
+Duplex state        : FULL
+
+
+PHY                 : XFP
+
+
+XFP mode            : LAN
+
+
+Speed selected      : FORC10,000
+
+
+Actual speed        : 10 Gbps
+
+
+Auto-Neg Advertise  : Default
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Egress-shaping      : rate 5g, burst-size 16M
+
+Ingress-shaping      : rate 5g, burst-size 16M
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+Tags List           : 1450
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+Flood limiting      : rate 10m
+
+Flood limiting      : unknown-unicast
+
+Flood limiting      : multicast
+
+Flood limiting      : broadcast
+
+
+
+
+Port 15 details:
+
+
+
+-------------------
+
+
+Description         : Port 15 - ETH10000
+
+
+Type                : ETH10000
+
+
+Link                : OFF   (118w1d22h16m20s)
+
+
+Duplex state        : FULL
+
+
+PHY                 : XFP
+
+
+XFP mode            : LAN
+
+
+Speed selected      : FORC10,000
+
+
+Actual speed        : 10 Gbps
+
+
+Auto-Neg Advertise  : Default
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : untagged
+
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
+
+
+Port 16 details:
+
+
+-------------------
+
+
+Description         : UPLINK
+
+
+Type                : ETH10000
+
+
+Link                : ON    (4w4d12h34m46s)
+
+
+Duplex state        : FULL
+
+
+PHY                 : XFP
+
+
+XFP mode            : LAN
+
+
+Speed selected      : FORC10,000
+
+
+Actual speed        : 10 Gbps
+
+
+Auto-Neg Advertise  : Default
+
+
+State               : ENABLE
+
+Priority            : 1
+
+
+Flow control mode   : off
+
+
+Ethertype           : CORE1:0x8100
+
+
+OutBound Tagged     : tagged
+
+
+Tags List           : 427,666,1044-1045,1208,1450,1732,2929
+
+DEI Remarking       : DISABLE
+
+
+UDLD Protocol       : -
+
+
+
