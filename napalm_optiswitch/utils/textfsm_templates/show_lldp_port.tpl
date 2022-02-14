@@ -7,6 +7,7 @@ Value RemoteSystemDescription (.*)
 Value List RemoteSystemCapab (.*)
 
 Start
+  ^\s+Port \d+ -> Continue.Record
   ^\s+Port ${Port}
   ^Chassis id\s+: ${RemoteChassisId}
   ^Port id\s+: ${PortId}
@@ -15,4 +16,3 @@ Start
   ^System description\s+: ${RemoteSystemDescription}
   ^System Capabilities :
   ^\s+${RemoteSystemCapab} -> Continue
-  ^(Management address)?\s+: -> Record
