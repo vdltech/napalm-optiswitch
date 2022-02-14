@@ -41,4 +41,3 @@ System description  :
 System Capabilities :
                       Bridge/Switch (enabled)
                       Router (enabled)
-Management address  : (subtype is IPv4) 93.20.8.25; ifIndex 16779039
