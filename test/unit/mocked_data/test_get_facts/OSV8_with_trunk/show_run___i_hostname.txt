@@ -1,0 +1,1 @@
+../../../devices/OSV8_with_trunk/show_run___i_hostname.txt

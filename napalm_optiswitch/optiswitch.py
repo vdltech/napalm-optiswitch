@@ -133,6 +133,8 @@ class OptiswitchDriver(NetworkDriver):
         info = textfsm_extractor(self, "show_version", show_version)[0]
         show_interface_detail = self._send_command("show interface detail")
         interfaces = textfsm_extractor(self, "show_interface_detail", show_interface_detail)
+        show_run_hostname = self._send_command("show run | i hostname")
+        hostname = re.search(r"^hostname (\S+)", show_run_hostname).group(1)
 
         # Return interface list including virtual interfaces
         interface_list = self._expand_port_list(info["validports"])
@@ -148,8 +150,8 @@ class OptiswitchDriver(NetworkDriver):
             uptime += int(info["uptimemins"]) * 60
 
         return {
-            "hostname": self.hostname,
-            "fqdn": "false",
+            "hostname": hostname.split(".")[0],
+            "fqdn": hostname if "." in hostname else "false",
             "vendor": "MRV",
             "model": info["model"],
             "serial_number": info["serialnumber"],
