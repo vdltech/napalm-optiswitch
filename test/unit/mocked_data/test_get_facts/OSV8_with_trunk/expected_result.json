@@ -1,1 +1,1 @@
-{"hostname": "127.0.0.1", "fqdn": "false", "vendor": "MRV", "model": "", "serial_number": "1716100771", "interface_list": ["1", "2", "3", "4", "5", "6", "7", "8", "vif867", "vif2812", "vif3653", "vif3656"], "os_version": "19_2_1 (15071)", "uptime": 25728300}
+{"hostname": "myhostname", "fqdn": "false", "vendor": "MRV", "model": "", "serial_number": "1716100771", "interface_list": ["1", "2", "3", "4", "5", "6", "7", "8", "vif867", "vif2812", "vif3653", "vif3656"], "os_version": "19_2_1 (15071)", "uptime": 25728300}
