@@ -10,7 +10,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="napalm-optiswitch",
-    version="0.1.8",
+    version="0.1.9",
     packages=find_packages(),
     author="Fredrik Rönnvall",
     author_email="fredr@vdltech.net",
@@ -18,8 +18,8 @@ setup(
     classifiers=[
         "Topic :: Utilities",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
         "Operating System :: POSIX :: Linux",
         "Operating System :: MacOS",
     ],

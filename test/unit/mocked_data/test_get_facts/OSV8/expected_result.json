@@ -2,7 +2,7 @@
   "hostname": "myhostname",
   "fqdn": "false",
   "vendor": "MRV",
-  "model": "",
+  "model": "FSP150-XG304 OptiSwitch V8",
   "serial_number": "2011100084",
   "interface_list": [
     "1",

@@ -1,4 +1,4 @@
-Value Model (OptiSwitch \S+)
+Value Model ((\S+ )?OptiSwitch \S+)
 Value ValidPorts ([\d\-]+)
 Value SerialNumber (\d+)
 Value MasterOS (.*)
@@ -9,7 +9,7 @@ Value UptimeMins (\d+)
 
 
 Start
-  ^MRV ${Model}
+  ^(MRV|ADVA) ${Model}
   ^Unit serial number\s+: ${SerialNumber}
   ^Valid ports: ${ValidPorts}
   ^MasterOS version: ${MasterOS}
