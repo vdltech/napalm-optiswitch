@@ -1,0 +1,5 @@
+Current configuration:
+! version 4_5_6 (19000)
+!
+rsyslog 1.1.1.1
+!

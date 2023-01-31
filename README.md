@@ -12,6 +12,10 @@ Napalm Driver for MRV/Adva Optiswitch devices
 * get_vlans
 * get_interfaces_vlans
 * get_mac_address_table
+* get_config
+* load_merge_candidate
+* discard_config
+* commit_config
 
 ## Supported Models
 

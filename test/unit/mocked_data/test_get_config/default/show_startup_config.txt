@@ -1,0 +1,8 @@
+! File: /usr/local/etc/System.conf
+!
+! File has been created 2023/01/31 13:28:52
+!
+! version 20_2_1 (17875)
+!
+rsyslog 1.1.1.1
+!

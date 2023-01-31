@@ -1,0 +1,4 @@
+{
+  "candidate": "",
+  "startup": "! File: /usr/local/etc/System.conf\n!\n! File has been created 2023/01/31 13:28:52\n!\n! version 20_2_1 (17875)\n!\nrsyslog 1.1.1.1\n!", "running": "Current configuration:\n! version 4_5_6 (19000)\n!\nrsyslog 1.1.1.1\n!"
+}

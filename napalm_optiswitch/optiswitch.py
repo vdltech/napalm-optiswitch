@@ -22,6 +22,7 @@ import re
 from napalm.base import NetworkDriver
 
 from napalm.base.helpers import textfsm_extractor
+from napalm.base.exceptions import MergeConfigException
 
 from netmiko import ConnectHandler
 
@@ -36,6 +37,8 @@ class OptiswitchDriver(NetworkDriver):
         self.username = username
         self.password = password
         self.timeout = timeout
+
+        self.merge_candidate = False
 
         if optional_args is None:
             optional_args = {}
@@ -355,6 +358,64 @@ class OptiswitchDriver(NetworkDriver):
             )
 
         return result
+
+    def get_config(self, retrieve="all", sanitized=False):
+        """Implementation of get_config for netiron.
+
+        Returns the startup or/and running configuration as dictionary.
+        The keys of the dictionary represent the type of configuration
+        (startup or running). The candidate is always empty string,
+        since optiswitch does not support candidate configuration.
+        """
+
+        configs = {
+            "startup": "",
+            "running": "",
+            "candidate": "",
+        }
+
+        if retrieve in ("startup", "all"):
+            command = "show startup-config"
+            output = self._send_command(command)
+            configs["startup"] = output
+
+        if retrieve in ("running", "all"):
+            command = "show running-config"
+            output = self._send_command(command)
+            configs["running"] = output
+
+        return configs
+
+    def commit_config(self, message="", revert_in=None):
+        """
+        Send self.merge_candidate to running-config by executing the commands
+        """
+
+        if not self.merge_candidate:
+            raise MergeConfigException("No merge candidate loaded")
+
+        output = self.device.send_config_set(self.merge_candidate.splitlines())
+        output += self._send_command("write mem")
+
+    def compare_config(self):
+        raise NotImplementedError("Config compare not supported on OptiSwitch devices")
+
+    def discard_config(self):
+        self.merge_candidate = False
+
+    def load_merge_candidate(self, filename=None, config=None):
+        if filename and config:
+            raise MergeConfigException("Cannot specify both filename and config")
+
+        if filename:
+            with open(filename, "r") as stream:
+                self.merge_candidate = stream.read()
+
+        if config:
+            self.merge_candidate = config
+
+    def load_replace_candidate(filename=None, config=None):
+        raise NotImplementedError
 
     def _lldp_system_enabled_capabilities(self, capabilities):
         enabled_capabilities = []
