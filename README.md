@@ -14,6 +14,8 @@ Napalm Driver for MRV/Adva Optiswitch devices
 * get_mac_address_table
 * get_config
 * load_merge_candidate
+* load_replace_candidate
+* compare_config
 * discard_config
 * commit_config
 
@@ -23,3 +25,8 @@ Napalm Driver for MRV/Adva Optiswitch devices
 * OptiSwitch 906
 * OptiSwitch 940
 * OptiSwitch V8
+
+
+## Replacing configs
+
+The OptiSwitch platform does not allow direct replacement of running config. If using `load_replace_config`, the config file will be applied line by line. The resulting running config may not match the candidate config sent.

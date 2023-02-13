@@ -19,12 +19,23 @@ Napalm driver for Skeleton.
 Read https://napalm.readthedocs.io for more information.
 """
 import re
-from napalm.base import NetworkDriver
+import os
+import tempfile
+import uuid
+import socket
+import difflib
 
+from napalm.base import NetworkDriver
 from napalm.base.helpers import textfsm_extractor
-from napalm.base.exceptions import MergeConfigException
+from napalm.base.exceptions import (
+    MergeConfigException,
+    ReplaceConfigException,
+    ConnectionClosedException,
+)
 
 from netmiko import ConnectHandler
+
+from .optiswitch_file_transfer import OptiSwitchFileTransfer
 
 
 class OptiswitchDriver(NetworkDriver):
@@ -39,15 +50,34 @@ class OptiswitchDriver(NetworkDriver):
         self.timeout = timeout
 
         self.merge_candidate = False
+        self.replace_candidate = False
 
         if optional_args is None:
             optional_args = {}
+
+    def _send_linux_command(self, command):
+        """wrapper to run commands under linux shell"""
+        self.device.send_command("linux", expect_string=r"\$")
+        output = self.device.send_command(command, expect_string=r"\$")
+        self.device.send_command("exit", expect_string=r"#")
+        return output.strip()
 
     def _send_command(self, command):
         """Wrapper for self.device.send.command().
         If command is a list will iterate through commands until valid command.
         """
-        return self.device.send_command(command)
+        try:
+            if isinstance(command, list):
+                output = str()
+                for cmd in command:
+                    print(cmd)
+                    output += self.device.send_command(cmd)
+            else:
+                output = self.device.send_command(command)
+            return output.strip()
+        except (socket.error, EOFError) as e:
+            raise ConnectionClosedException(str(e))
+        # return self.device.send_command(command)
 
     def _send_command_timing(self, command):
         """Wrapper for self.device.send.command_timing().
@@ -384,6 +414,11 @@ class OptiswitchDriver(NetworkDriver):
             output = self._send_command(command)
             configs["running"] = output
 
+        if retrieve in ("candidate", "all"):
+            command = "show conf candidate.conf"
+            output = self._send_command(command)
+            configs["candidate"] = output
+
         return configs
 
     def commit_config(self, message="", revert_in=None):
@@ -391,17 +426,46 @@ class OptiswitchDriver(NetworkDriver):
         Send self.merge_candidate to running-config by executing the commands
         """
 
-        if not self.merge_candidate:
-            raise MergeConfigException("No merge candidate loaded")
+        if self.merge_candidate:
+            output = self.device.send_config_set(self.merge_candidate.splitlines())
+            output += self._send_command("write mem")
 
-        output = self.device.send_config_set(self.merge_candidate.splitlines())
-        output += self._send_command("write mem")
+        else:
+            self._send_command(
+                f"copy scp running-config 127.0.0.1 /usr/local/etc/sys candidate.conf {self.username} {self.password}"
+            )
+            self._send_command("write mem")
 
     def compare_config(self):
-        raise NotImplementedError("Config compare not supported on OptiSwitch devices")
+        if not self.replace_candidate:
+            raise NotImplementedError("Config compare not supported on merge configs")
+
+        running_config = self._send_command("show running-config")
+
+        # clean up running config and replace candidate
+        running_config_list = [
+            line.strip()
+            for line in running_config.splitlines()
+            if line
+            and not any(
+                line.startswith(excluded_line)
+                for excluded_line in [
+                    "Building configuration",
+                    "Current configuration",
+                    "! version",
+                ]
+            )
+        ]
+        replace_candidate_list = [
+            line.strip() for line in self.replace_candidate.splitlines() if line
+        ]
+
+        diff = difflib.unified_diff(running_config_list, replace_candidate_list)
+        return "\n".join(diff)
 
     def discard_config(self):
         self.merge_candidate = False
+        self.replace_candidate = False
 
     def load_merge_candidate(self, filename=None, config=None):
         if filename and config:
@@ -414,8 +478,38 @@ class OptiswitchDriver(NetworkDriver):
         if config:
             self.merge_candidate = config
 
-    def load_replace_candidate(filename=None, config=None):
-        raise NotImplementedError
+    def load_replace_candidate(self, filename=None, config=None):
+        if filename and config:
+            raise ReplaceConfigException("Cannot specify both filename and config")
+
+        if filename:
+            with open(filename, "r") as stream:
+                self.replace_candidate = stream.read()
+
+        if config:
+            self.replace_candidate = config
+
+        tmp_file = self._create_tmp_file(self.replace_candidate)
+
+        with OptiSwitchFileTransfer(
+            ssh_conn=self.device,
+            source_file=tmp_file,
+            dest_file="candidate.conf",
+            direction="put",
+            file_system="/usr/local/etc/sys",
+        ) as transfer:
+
+            if not transfer.verify_space_available():
+                raise ReplaceConfigException("Insufficient space available on target filesystem")
+
+            if not (transfer.check_file_exists() and transfer.compare_md5()):
+                transfer.put_file()
+
+            if tmp_file and os.path.isfile(tmp_file):
+                os.remove(tmp_file)
+
+            if not transfer.verify_file():
+                raise ReplaceConfigException("File transfer to remote device failed")
 
     def _lldp_system_enabled_capabilities(self, capabilities):
         enabled_capabilities = []
@@ -444,6 +538,16 @@ class OptiswitchDriver(NetworkDriver):
             "docsis-cable-device",
             "station",
         ]
+
+    @staticmethod
+    def _create_tmp_file(config):
+        """Write temp file and for use with and SCP."""
+        tmp_dir = tempfile.gettempdir()
+        rand_fname = str(uuid.uuid4())
+        filename = os.path.join(tmp_dir, rand_fname)
+        with open(filename, "wt") as fobj:
+            fobj.write(config)
+        return filename
 
     def open(self):
         """Implement the NAPALM method open (mandatory)"""
