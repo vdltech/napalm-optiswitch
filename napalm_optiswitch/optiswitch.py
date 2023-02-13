@@ -271,7 +271,6 @@ class OptiswitchDriver(NetworkDriver):
                 vlan_id = int(interface["tag"])
                 # Ignore VLANs higher than 4094 and vifs that are down
                 if vlan_id < 4095 and interface["linkstate"].lower() == "up":
-
                     # Add port and vif to list of interfaces
                     for intf in self._expand_port_list(interface["ports"]):
                         if result[intf]["mode"] == "access":
@@ -498,7 +497,6 @@ class OptiswitchDriver(NetworkDriver):
             direction="put",
             file_system="/usr/local/etc/sys",
         ) as transfer:
-
             if not transfer.verify_space_available():
                 raise ReplaceConfigException("Insufficient space available on target filesystem")
 
