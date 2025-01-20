@@ -150,7 +150,7 @@ class OptiswitchDriver(NetworkDriver):
                 i["vif"]: {
                     "is_up": i["linkstate"] == "UP",
                     "is_enabled": i["active"] == "Yes",
-                    "description": i["description"],
+                    "description": i["description"] if i["description"] else i["name"],
                     "speed": -1,
                     "mtu": self._convert_mtu(i["mtu"]),
                     "last_flapped": -1.0,
@@ -279,6 +279,11 @@ class OptiswitchDriver(NetworkDriver):
                             result[intf]["trunk-vlans"].append(vlan_id)
 
                     result[interface["vif"]]["access-vlan"] = vlan_id
+
+        # Add native vlan to hybrid mode ports
+        for line in self._send_command("show running-config | i hybrid").splitlines():
+            port_str, tag_outbound_mode, hybrid, port_id, vlan_id = line.split()
+            result[port_id]["native-vlan"] = vlan_id
 
         return result
 
