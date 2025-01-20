@@ -56,7 +56,7 @@
   "vif10": {
     "is_up": false,
     "is_enabled": true,
-    "description": "",
+    "description": "DELETE-ME",
     "speed": -1,
     "mtu": 1500,
     "last_flapped": -1.0,
@@ -65,7 +65,7 @@
   "vif69": {
     "is_up": true,
     "is_enabled": true,
-    "description": "",
+    "description": "loss-test",
     "speed": -1,
     "mtu": 1500,
     "last_flapped": -1.0,
@@ -83,7 +83,7 @@
   "vif3801": {
     "is_up": true,
     "is_enabled": true,
-    "description": "",
+    "description": "UNTRUST",
     "speed": -1,
     "mtu": 1500,
     "last_flapped": -1.0,
@@ -92,7 +92,7 @@
   "vif3815": {
     "is_up": true,
     "is_enabled": true,
-    "description": "",
+    "description": "SRX-UT-VL",
     "speed": -1,
     "mtu": 1500,
     "last_flapped": -1.0,
@@ -110,7 +110,7 @@
   "eth0": {
     "is_up": true,
     "is_enabled": true,
-    "description": "",
+    "description": "CUST-DCN",
     "speed": -1,
     "mtu": 0,
     "last_flapped": -1.0,

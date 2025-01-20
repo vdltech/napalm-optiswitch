@@ -38,7 +38,7 @@
   "vif472": {
     "is_up": true,
     "is_enabled": true,
-    "description": "",
+    "description": "CN-VLAN",
     "speed": -1,
     "mtu": 1500,
     "last_flapped": -1,

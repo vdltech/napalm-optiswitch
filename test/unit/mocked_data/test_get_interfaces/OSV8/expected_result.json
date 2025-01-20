@@ -74,7 +74,7 @@
   "vif427": {
     "is_up": true,
     "is_enabled": true,
-    "description": "",
+    "description": "CN-VLAN",
     "speed": -1,
     "mtu": 1500,
     "last_flapped": -1.0,
@@ -83,7 +83,7 @@
   "vif1823": {
     "is_up": true,
     "is_enabled": true,
-    "description": "",
+    "description": "CUSTOMER-VLAN",
     "speed": -1,
     "mtu": 1500,
     "last_flapped": -1.0,

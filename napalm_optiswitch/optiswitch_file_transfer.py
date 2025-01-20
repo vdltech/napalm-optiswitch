@@ -3,6 +3,7 @@ NAPALM Optiswitch File Transfer
 
 Netmiko does not have have native MRV SCP support. This provides it.
 """
+
 import logging
 import os
 import re
