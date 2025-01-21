@@ -282,8 +282,9 @@ class OptiswitchDriver(NetworkDriver):
 
         # Add native vlan to hybrid mode ports
         for line in self._send_command("show running-config | i hybrid").splitlines():
-            port_str, tag_outbound_mode, hybrid, port_id, vlan_id = line.split()
-            result[port_id]["native-vlan"] = vlan_id
+            port_str, tag_outbound_mode, hybrid, port_ids, vlan_id = line.split()
+            for port_id in port_ids.split(","):
+                result[port_id]["native-vlan"] = vlan_id
 
         return result
 
