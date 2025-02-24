@@ -54,6 +54,7 @@ class OptiswitchDriver(NetworkDriver):
 
         if optional_args is None:
             optional_args = {}
+        self.optional_args = optional_args
 
     def _send_linux_command(self, command):
         """wrapper to run commands under linux shell"""
@@ -555,19 +556,18 @@ class OptiswitchDriver(NetworkDriver):
 
     def open(self):
         """Implement the NAPALM method open (mandatory)"""
-        device_type = "mrv_optiswitch"
-        global_delay_factor = 2
-        self.device = ConnectHandler(
-            device_type=device_type,
-            host=self.hostname,
-            username=self.username,
-            password=self.password,
-            timeout=self.timeout,
-            conn_timeout=self.timeout,
-            global_delay_factor=global_delay_factor,
-        )
-        # ,
-        # **self.netmiko_optional_args)
+        device = {
+            "device_type": "mrv_optiswitch",
+            "host": self.hostname,
+            "username": self.username,
+            "password": self.password,
+            "timeout": self.timeout,
+            "conn_timeout": self.timeout,
+            "verbose": False,
+            "global_delay_factor": 2,
+        }
+        device.update(self.optional_args)
+        self.device = ConnectHandler(**device)
         self.device.enable()
 
     def close(self):
