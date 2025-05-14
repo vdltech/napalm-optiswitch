@@ -63,7 +63,7 @@ class OptiswitchDriver(NetworkDriver):
         self.device.send_command("exit", expect_string=r"#")
         return output.strip()
 
-    def _send_command(self, command):
+    def _send_command(self, command, timeout=10):
         """Wrapper for self.device.send.command().
         If command is a list will iterate through commands until valid command.
         """
@@ -72,9 +72,9 @@ class OptiswitchDriver(NetworkDriver):
                 output = str()
                 for cmd in command:
                     print(cmd)
-                    output += self.device.send_command(cmd)
+                    output += self.device.send_command(cmd, read_timeout=timeout)
             else:
-                output = self.device.send_command(command)
+                output = self.device.send_command(command, read_timeout=timeout)
             return output.strip()
         except (socket.error, EOFError) as e:
             raise ConnectionClosedException(str(e))
@@ -438,9 +438,10 @@ class OptiswitchDriver(NetworkDriver):
 
         else:
             self._send_command(
-                f"copy scp running-config 127.0.0.1 /usr/local/etc/sys candidate.conf {self.username} {self.password}"
+                f"copy scp startup-config 127.0.0.1 /usr/local/etc/sys candidate.conf {self.username} {self.password}",
+                timeout=120,
             )
-            self._send_command("write mem")
+            self._send_command("reboot-force")
 
     def compare_config(self):
         if not self.replace_candidate:

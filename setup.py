@@ -10,7 +10,7 @@ with open("requirements.txt") as f:
 
 setup(
     name="napalm-optiswitch",
-    version="0.2.4",
+    version="0.2.5",
     packages=find_packages(),
     author="Fredrik Rönnvall",
     author_email="fredr@vdltech.net",
