@@ -433,7 +433,8 @@ class OptiswitchDriver(NetworkDriver):
         """
 
         if self.merge_candidate:
-            output = self.device.send_config_set(self.merge_candidate.splitlines())
+            # traffic manager changes can take some time to apply, so read_timeout set to 60sec
+            output = self.device.send_config_set(self.merge_candidate.splitlines(), read_timeout=60)
             output += self._send_command("write mem")
 
         else:
